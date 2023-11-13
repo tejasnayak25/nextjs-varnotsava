@@ -1,30 +1,90 @@
 import Image from 'next/image'
+import { NovusBase } from "@/lib/models"
+import { Form } from "@/lib/form"
+import Lamp from "@/public/images/lamp.png"
+import Flow from "@/public/images/flow.png"
+import localFont from 'next/font/local'
 
-export default function Home() {
+// const surt = localFont({
+//   src: [
+//     {path: '../public/fonts/waterlily.regular.ttf'}
+//   ],
+//   variable: '--font-waterlily',
+// })
+
+// const waterlily = localFont({src: '../public/fonts/waterlily.regular.ttf'})
+
+export default async function Home() {
+  let response = await fetch("http://localhost:3000/api/server")
+  let json = await response.json();
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="flex min-h-screen flex-col items-center justify-between p-16 px-0">
+      <div className="z-10 max-w-5xl w-full h-full font-mono text-sm" style={{height: "100vh"}}>
+        <header className='w-full'>
+          <ul className=' menu lg:menu-horizontal relative md:menu-vertical flex justify-center w-full items-center'>
+            <div className='absolute left-0'>
+              <p className='text-2xl' style={{fontFamily: "futura"}}>SMVITM</p>
+            </div>
+
+            <div className='flex gap-7 text-lg font-mono'>
+              <p style={{color:"#ff9b9b"}}>Home</p>
+              <p>Gallery</p>
+              <p>Register</p>
+              <p>Contact</p>
+              <p>About</p>
+            </div>
+
+            <div className='absolute right-0 text-2xl'>
+              <p>SMVITM</p>
+            </div>
+          </ul>
+        </header>
+
+        <div className='flex flex-col justify-center items-center w-full h-full absolute top-0 left-0'>
+          <img src={Lamp.src} alt="" className=' w-3/6 mt-40' style={{filter: "brightness(80%) contrast(1.2) blur(0.2px)", marginLeft: "-100px"}}></img>
+          <div className='absolute flex flex-col justify-center mt-20'>
+            <p className=' text-8xl' style={{fontFamily: "WaterLily"}}>VARNOTSAVA - 2K23</p>
+            <p className=' text-xl text-center mt-3' style={{fontFamily: "Kollektif"}}>The Festival of Joy is Back!</p>
+            <div className='w-full flex justify-center mt-5'>
+              <button className='btn rounded-full border-0 text-black w-52' style={{backgroundColor: "#ff9b9b", fontFamily: "monospace"}}>KNOW MORE</button>
+            </div>
+          </div>
+        </div>
+
+        
+        
+
+      </div>
+
+      <div className=' w-full flex flex-col justify-center items-center' style={{height:"100vh"}}>
+        <img src={Flow.src} alt="" className=' w-4/6' style={{filter: "brightness(70%) contrast(1) blur(0.2px)", marginLeft: "-100px"}}></img>
+        <div className='absolute'>
+          <div className=' flex gap-5 items-center'>
+            <p className='text-8xl' style={{fontFamily: "WaterLily", textShadow: " -5px 0 1px #00ffff, 5px 0 1px #ff00ff"}}>1000</p>
+            <p className='text-6xl' style={{fontFamily: "WaterLily"}}>Events Registered</p>
+          </div>
+          <div className='w-full flex justify-center mt-10'>
+              <button className='btn rounded-full border-0 text-black w-52' style={{backgroundColor: "#ff9b9b", fontFamily: "monospace"}}>REGISTER NOW</button>
+          </div>
+        </div>
+      </div>
+
+      <div className=' w-full flex flex-col justify-center items-center' style={{height:"100vh"}}>
+        <p className='text-6xl' style={{fontFamily: "WaterLily"}}>WHEN?</p>
+
+        <div className='flex gap-10 mt-20'>
+          <p className='text-7xl px-10 py-6 bg-white text-black' style={{fontFamily: "WaterLily"}}>20</p>
+          <p className='text-7xl px-20 py-6 bg-white text-black' style={{fontFamily: "WaterLily"}}>DECEMBER</p>
+          <p className='text-7xl px-14 py-6 bg-white text-black' style={{fontFamily: "WaterLily"}}>2023</p>
+        </div>
+      </div>
+
+      <div className=' w-full flex flex-col justify-center items-center' style={{height:"100vh"}}>
+        <p className='text-6xl' style={{fontFamily: "WaterLily"}}>WHERE?</p>
+
+        <div className='flex flex-col gap-10 mt-20 w-full'>
+          <img className='w-full h-96 object-cover' src="/images/college.jpeg" alt=""></img>
+          <p className='w-full text-center text-3xl' style={{fontFamily: "futura"}}>SHRI MADHWA VADIRAJA INSTITUTE OF TECHNOLOGY AND MANAGEMENT</p>
         </div>
       </div>
 
@@ -56,10 +116,10 @@ export default function Home() {
             Find in-depth information about Next.js features and API.
           </p>
         </a>
-
+        {/* {Form(NovusBase)} */}
         <a
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
           target="_blank"
           rel="noopener noreferrer"
         >
