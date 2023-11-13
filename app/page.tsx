@@ -3,7 +3,7 @@ import { NovusBase } from "@/lib/models"
 import { Form } from "@/lib/form"
 import Lamp from "@/public/images/lamp.png"
 import Flow from "@/public/images/flow.png"
-// import localFont from 'next/font/local'
+import localFont from 'next/font/local'
 
 // const Lamp = {src:"https://th.bing.com/th/id/OIP.mFuXoMcAqbvUwjDjwTkFHAHaHa?pid=ImgDet&rs=1"};
 // const Flow = {src:"https://th.bing.com/th/id/OIP.mFuXoMcAqbvUwjDjwTkFHAHaHa?pid=ImgDet&rs=1"};
@@ -15,7 +15,7 @@ import Flow from "@/public/images/flow.png"
 //   variable: '--font-waterlily',
 // })
 
-// const waterlily = localFont({src: '../public/fonts/waterlily.regular.ttf'})
+const waterlily = localFont({src: '../public/fonts/waterlily.regular.ttf'})
 
 export default async function Home() {
   return (
@@ -44,7 +44,7 @@ export default async function Home() {
         <div className='flex flex-col justify-center items-center w-full h-full absolute top-0 left-0'>
           <img src={Lamp.src} alt="" className=' w-3/6 mt-40' style={{filter: "brightness(80%) contrast(1.2) blur(0.2px)", marginLeft: "-100px"}}></img>
           <div className='absolute flex flex-col justify-center mt-20'>
-            <p className=' text-8xl' style={{fontFamily: "WaterLily"}}>VARNOTSAVA - 2K23</p>
+            <p className=' text-8xl' style={{fontFamily: waterlily.className}}>VARNOTSAVA - 2K23</p>
             <p className=' text-xl text-center mt-3' style={{fontFamily: "Kollektif"}}>The Festival of Joy is Back!</p>
             <div className='w-full flex justify-center mt-5'>
               <button className='btn rounded-full border-0 text-black w-52' style={{backgroundColor: "#ff9b9b", fontFamily: "monospace"}}>KNOW MORE</button>
