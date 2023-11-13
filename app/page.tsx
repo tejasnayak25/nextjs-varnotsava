@@ -18,8 +18,6 @@ const Flow = {src:"https://th.bing.com/th/id/OIP.mFuXoMcAqbvUwjDjwTkFHAHaHa?pid=
 // const waterlily = localFont({src: '../public/fonts/waterlily.regular.ttf'})
 
 export default async function Home() {
-  let response = await fetch("http://localhost:3000/api/server")
-  let json = await response.json();
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-16 px-0">
       <div className="z-10 max-w-5xl w-full h-full font-mono text-sm" style={{height: "100vh"}}>
