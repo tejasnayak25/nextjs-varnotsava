@@ -1,4 +1,4 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 import { NovusBase } from "@/lib/models"
 import { Form } from "@/lib/form"
 // import Lamp from "@/public/images/lamp.png"
