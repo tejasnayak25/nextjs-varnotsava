@@ -16,6 +16,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="preload"
+          href="/fonts/waterlily.regular.ttf"
+          as="font"
+          crossOrigin=""
+        />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )
