@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'WaterLily';
+  src: url('/fonts/WaterLily Script.ttf');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kollektif';
+  src: url('/fonts/Kollektif.ttf');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sans';
+  src: url('/fonts/Sans.ttf');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'futura';
+  src: url('/fonts/futura light bt.ttf');
+  font-weight: 400;
+  font-display: swap;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
