@@ -5,8 +5,8 @@ import { Form } from "@/lib/form"
 // import Flow from "@/public/images/flow.png"
 import localFont from 'next/font/local'
 
-const Lamp = "https://th.bing.com/th/id/OIP.mFuXoMcAqbvUwjDjwTkFHAHaHa?pid=ImgDet&rs=1";
-const Flow = "https://th.bing.com/th/id/OIP.mFuXoMcAqbvUwjDjwTkFHAHaHa?pid=ImgDet&rs=1";
+const Lamp = {src:"https://th.bing.com/th/id/OIP.mFuXoMcAqbvUwjDjwTkFHAHaHa?pid=ImgDet&rs=1"};
+const Flow = {src:"https://th.bing.com/th/id/OIP.mFuXoMcAqbvUwjDjwTkFHAHaHa?pid=ImgDet&rs=1"};
 
 // const surt = localFont({
 //   src: [
