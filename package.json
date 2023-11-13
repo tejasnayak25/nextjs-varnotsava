@@ -11,7 +11,8 @@
   "dependencies": {
     "react": "^18",
     "react-dom": "^18",
-    "next": "13.4.20-canary.24"
+    "next": "13.4.20-canary.24",
+    "daisyui": "latest"
   },
   "devDependencies": {
     "typescript": "^5",
