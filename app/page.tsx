@@ -18,7 +18,7 @@ import Flow from "@/public/images/flow.png"
 
 // const waterlily = localFont({src: '../public/fonts/waterlily.regular.ttf'})
 
-var images = ["image1", "image2", "image3", "image4"]
+var images = ["image1.jpeg", "image2.jpeg", "image3.jpeg", "image4.jpeg"]
 
 function getImages() {
   let code = [];
