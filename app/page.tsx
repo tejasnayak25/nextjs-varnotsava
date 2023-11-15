@@ -3,8 +3,8 @@ import { NovusBase } from "@/lib/models"
 import { Form } from "@/lib/form"
 import Lamp from "@/public/images/lamp.png"
 import Flow from "@/public/images/flow.png"
-import localFont from 'next/font/local'
-import * as fs from 'fs'
+// import localFont from 'next/font/local'
+// import * as fs from 'fs'
 
 // const Lamp = {src:"https://th.bing.com/th/id/OIP.mFuXoMcAqbvUwjDjwTkFHAHaHa?pid=ImgDet&rs=1"};
 // const Flow = {src:"https://th.bing.com/th/id/OIP.mFuXoMcAqbvUwjDjwTkFHAHaHa?pid=ImgDet&rs=1"};
@@ -18,7 +18,7 @@ import * as fs from 'fs'
 
 // const waterlily = localFont({src: '../public/fonts/waterlily.regular.ttf'})
 
-var images = fs.readdirSync("public\\images\\college");
+var images = ["image1", "image2", "image3", "image4"]
 
 function getImages() {
   let code = [];
