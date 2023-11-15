@@ -21,25 +21,7 @@ export default async function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-16 px-0">
       <div className="z-10 max-w-5xl w-full h-full font-mono text-sm" style={{height: "100vh"}}>
-        <header className='w-full'>
-          <ul className=' menu lg:menu-horizontal relative md:menu-vertical flex justify-center w-full items-center'>
-            <div className='absolute left-0'>
-              <p className='text-2xl' style={{fontFamily: "futura"}}>SMVITM</p>
-            </div>
-
-            <div className='flex gap-7 text-lg font-mono'>
-              <p style={{color:"#ff9b9b"}}>Home</p>
-              <p>Gallery</p>
-              <p>Register</p>
-              <p>Contact</p>
-              <p>About</p>
-            </div>
-
-            <div className='absolute right-0 text-2xl'>
-              <p>SMVITM</p>
-            </div>
-          </ul>
-        </header>
+        
 
         <div className='flex flex-col justify-center items-center w-full h-full absolute top-0 left-0'>
           <img src={Lamp.src} alt="" className=' w-3/6 mt-40' style={{filter: "brightness(80%) contrast(1.2) blur(0.2px)", marginLeft: "-100px"}}></img>
