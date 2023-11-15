@@ -1,19 +1,10 @@
-// import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
-
-export const metadata = {
-  title: 'Varnotsava - 2K23',
-  description: 'Join SMVITM in celebrating our festival of joy',
-}
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+'use client'
+ 
+import { useState } from 'react'
+ 
+export default function Header() {
+  const [count, setCount] = useState(0)
+ 
   return (
     <header className='w-full'>
           <ul className=' menu lg:menu-horizontal relative md:menu-vertical flex justify-center w-full items-center'>
