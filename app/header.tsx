@@ -21,7 +21,11 @@ export default function Header() {
             </div>
 
             <div className='absolute right-0 text-2xl'>
-              <p>SMVITM</p>
+                <div className='flex gap-3'>
+                    <i className='uil uil-facebook text-3xl'></i>
+                    <i className='uil uil-instagram text-3xl'></i>
+                    <i className='uil uil-twitter text-3xl'></i>
+                </div>
             </div>
           </ul>
     </header>

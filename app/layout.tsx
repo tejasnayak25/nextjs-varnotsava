@@ -2,6 +2,7 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from "./header"
+import Footer from "./footer"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,10 +25,22 @@ export default function RootLayout({
           as="font"
           crossOrigin=""
         />
+        <link rel="stylesheet" href="/material-icons.css" />
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"></link>
+        {/* <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+        </script> */}
+        <script src='/script.js'></script>
+
       </head>
       <body className={inter.className}>
-        <Header/>
+        <div className={"p-10"}>
+          <Header/>
+        </div>
         {children}
+        <div>
+          <Footer/>
+        </div>
       </body>
     </html>
   )
