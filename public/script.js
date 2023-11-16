@@ -19,21 +19,17 @@
 // document.getElementById("map").onload = () => initMap;
 
 document.querySelectorAll("header ul #menu a").forEach(elem => {
-    let div = elem.querySelector("div"), interval;
+    let div = elem.querySelector("div"),
+    p = elem.querySelector("p");
 
     elem.addEventListener("mouseover", () => {
-        interval = setInterval(() => {
-            if(div.style.getPropertyValue("width") !== "100%") {
-                div.style.width = Number(div.style.width.split("%")[0]) + 5 + "%";
-            } else {
-                remInterval(interval);
-            }
-        }, 10);
+        p.classList.add("color-pink-red");
+        div.classList.remove("hidden");
     });
 
     elem.addEventListener("mouseout", () => {
-        div.style.width = "0%";
-        remInterval(interval);
+        p.classList.remove("color-pink-red");
+        div.classList.add("hidden");
     });
 });
 

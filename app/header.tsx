@@ -13,11 +13,11 @@ export default function Header() {
             </div>
 
             <div id='menu' className='flex gap-7 text-lg font-mono'>
-              <a className='flex flex-col justify-center cursor-pointer' style={{color:"#ff9b9b"}}><p>Home</p><div className='h-1' style={{backgroundColor: "#ff9b9b", width: "0px"}}></div></a>
-              <a className='flex flex-col justify-center cursor-pointer'><p>Gallery</p><div className='h-1' style={{backgroundColor: "#ff9b9b", width: "0px"}}></div></a>
-              <a className='flex flex-col justify-center cursor-pointer'><p>Register</p><div className='h-1' style={{backgroundColor: "#ff9b9b", width: "0px"}}></div></a>
-              <a className='flex flex-col justify-center cursor-pointer'><p>Contact</p><div className='h-1' style={{backgroundColor: "#ff9b9b", width: "0px"}}></div></a>
-              <a className='flex flex-col justify-center cursor-pointer'><p>About</p><div className='h-1' style={{backgroundColor: "#ff9b9b", width: "0px"}}></div></a>
+              <a className='flex flex-col justify-center cursor-pointer relative' style={{color:"#ff9b9b"}}><p>Home</p><div className='h-1 hidden w-full absolute bottom-0' style={{backgroundColor: "#ff9b9b"}}></div></a>
+              <a className='flex flex-col justify-center cursor-pointer relative'><p>Gallery</p><div className='h-1 hidden w-full absolute bottom-0' style={{backgroundColor: "#ff9b9b"}}></div></a>
+              <a className='flex flex-col justify-center cursor-pointer relative'><p>Register</p><div className='h-1 hidden w-full absolute bottom-0' style={{backgroundColor: "#ff9b9b"}}></div></a>
+              <a className='flex flex-col justify-center cursor-pointer relative'><p>Contact</p><div className='h-1 hidden w-full absolute bottom-0' style={{backgroundColor: "#ff9b9b"}}></div></a>
+              <a className='flex flex-col justify-center cursor-pointer relative'><p>About</p><div className='h-1 hidden w-full absolute bottom-0' style={{backgroundColor: "#ff9b9b"}}></div></a>
             </div>
 
             <div className='absolute right-0 text-2xl'>

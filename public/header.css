@@ -1,0 +1,15 @@
+header ul #menu a div {
+    animation: length 0.2s;
+    width: 100%;
+    bottom: -5px;
+    border-radius: 9999px;
+}
+
+.color-pink-red {
+    color: #ff9b9b;
+}
+
+@keyframes length {
+    from {width: 0;}
+    to {width: 100%;}
+}

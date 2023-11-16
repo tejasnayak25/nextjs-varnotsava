@@ -26,6 +26,7 @@ export default function RootLayout({
           crossOrigin=""
         />
         <link rel="stylesheet" href="/material-icons.css" />
+        <link rel="stylesheet" href="/header.css" />
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"></link>
         {/* <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
