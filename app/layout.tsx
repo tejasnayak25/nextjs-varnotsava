@@ -30,7 +30,6 @@ export default function RootLayout({
         {/* <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
         </script> */}
-        <script src='/script.js'></script>
 
       </head>
       <body className={inter.className}>
@@ -41,6 +40,7 @@ export default function RootLayout({
         <div>
           <Footer/>
         </div>
+        <script src='/script.js'></script>
       </body>
     </html>
   )

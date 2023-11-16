@@ -12,12 +12,12 @@ export default function Header() {
               <p className='text-2xl' style={{fontFamily: "futura"}}>SMVITM</p>
             </div>
 
-            <div className='flex gap-7 text-lg font-mono'>
-              <p style={{color:"#ff9b9b"}}>Home</p>
-              <p>Gallery</p>
-              <p>Register</p>
-              <p>Contact</p>
-              <p>About</p>
+            <div id='menu' className='flex gap-7 text-lg font-mono'>
+              <a className='flex flex-col justify-center cursor-pointer' style={{color:"#ff9b9b"}}><p>Home</p><div className='h-1' style={{backgroundColor: "#ff9b9b", width: "0px"}}></div></a>
+              <a className='flex flex-col justify-center cursor-pointer'><p>Gallery</p><div className='h-1' style={{backgroundColor: "#ff9b9b", width: "0px"}}></div></a>
+              <a className='flex flex-col justify-center cursor-pointer'><p>Register</p><div className='h-1' style={{backgroundColor: "#ff9b9b", width: "0px"}}></div></a>
+              <a className='flex flex-col justify-center cursor-pointer'><p>Contact</p><div className='h-1' style={{backgroundColor: "#ff9b9b", width: "0px"}}></div></a>
+              <a className='flex flex-col justify-center cursor-pointer'><p>About</p><div className='h-1' style={{backgroundColor: "#ff9b9b", width: "0px"}}></div></a>
             </div>
 
             <div className='absolute right-0 text-2xl'>

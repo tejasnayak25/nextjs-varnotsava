@@ -37,9 +37,9 @@ export default async function Home() {
       <div className="z-10 max-w-5xl w-full h-full font-mono text-sm" style={{height: "100vh"}}>
         
 
-        <div className='flex flex-col justify-center items-center w-full h-full absolute top-0 left-0'>
-          <img src={Lamp.src} alt="" className=' w-3/6 mt-40' style={{filter: "brightness(80%) contrast(1.2) blur(0.2px)", marginLeft: "-100px"}}></img>
-          <div className='absolute flex flex-col justify-center mt-20'>
+        <div className='flex flex-col justify-center items-center w-full h-3/6 top-0 left-0'>
+          <img src={Lamp.src} alt="" className=' w-3/6 mt-52' style={{filter: "brightness(80%) contrast(1.2) blur(0.2px)", marginLeft: "-100px"}}></img>
+          <div className='absolute flex flex-col justify-center'>
             <p className=' text-8xl' style={{fontFamily: "WaterLily"}}>VARNOTSAVA - 2K23</p>
             <p className=' text-xl text-center mt-3' style={{fontFamily: "Kollektif"}}>The Festival of Joy is Back!</p>
             <div className='w-full flex justify-center mt-5'>

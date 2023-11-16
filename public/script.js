@@ -17,3 +17,27 @@
 // }
 
 // document.getElementById("map").onload = () => initMap;
+
+document.querySelectorAll("header ul #menu a").forEach(elem => {
+    let div = elem.querySelector("div"), interval;
+
+    elem.addEventListener("mouseover", () => {
+        interval = setInterval(() => {
+            if(div.style.getPropertyValue("width") !== "100%") {
+                div.style.width = Number(div.style.width.split("%")[0]) + 5 + "%";
+            } else {
+                remInterval(interval);
+            }
+        }, 10);
+    });
+
+    elem.addEventListener("mouseout", () => {
+        div.style.width = "0%";
+        remInterval(interval);
+    });
+});
+
+
+function remInterval(interval) {
+    clearInterval(interval);
+}
