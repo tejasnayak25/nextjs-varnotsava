@@ -34,7 +34,7 @@ export default function RootLayout({
         </script> */}
 
       </head>
-      <body className={inter.className}>
+      <body className={inter.className + "bg-black text-white"}>
         <div className={"p-10"}>
           <Header/>
         </div>
