@@ -33,6 +33,48 @@ document.querySelectorAll("header ul #menu a").forEach(elem => {
     });
 });
 
+// fetch("https://drive.google.com/drive/folders/1rg15_ufbsYmua0DbTkm7X0f1Bm2s8KIh?usp=drive_link", {
+//     mode: "no-cors"
+// })
+// .then(async (res) => {
+//     console.log(res);
+// });
+
+document.getElementById("showMenu").onclick = () => {
+    let menu = document.getElementById("menu"),
+    btn = document.getElementById("showMenu").querySelector("span");
+
+    if(menu.classList.contains("hidden")) {
+        menu.classList.replace("hidden", "flex");
+        btn.innerText = "close";
+    } else if(menu.classList.contains("flex")) {
+        menu.classList.replace("flex", "hidden");
+        btn.innerText = "menu";
+    }
+}
+
+(async () => {
+    $.ajax({
+        url: 'https://script.google.com/macros/s/AKfycby43fe7pDYldKMlYkzZH5Y-pRqQW9oGRBvVMNBoZWpOj9DCaXkbRIbkvJqRW0-JXbLK/exec',
+        method: 'GET',
+        mode: 'no-cors',
+        dataType: 'json',
+        data: {
+            parameters: {
+                fid: ["1gI6gsMNlcBedgzG58rXe-3ltLX4zd7WK"]
+            }
+        },
+        success: function(data) {
+            // Do something with the JSON data
+            console.log(data);
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.error('Error fetching data:', textStatus, errorThrown);
+        }
+    });
+})();
+
+
 
 function remInterval(interval) {
     clearInterval(interval);

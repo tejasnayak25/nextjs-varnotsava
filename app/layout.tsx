@@ -27,6 +27,7 @@ export default function RootLayout({
         />
         <link rel="stylesheet" href="/material-icons.css" />
         <link rel="stylesheet" href="/header.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-symbols@0.14.1/index.min.css"></link>
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"></link>
         {/* <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
@@ -41,6 +42,8 @@ export default function RootLayout({
         <div>
           <Footer/>
         </div>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossOrigin="anonymous" referrerPolicy="no-referrer"></script>
         <script src='/script.js'></script>
       </body>
     </html>

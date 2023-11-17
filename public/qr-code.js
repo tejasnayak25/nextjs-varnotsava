@@ -1,0 +1,1 @@
+// new QRCode("qr-code", location.href);

@@ -7,8 +7,8 @@ export default function Footer() {
  
   return (
     <div className='w-full'>
-        <footer className='w-full grid grid-cols-2 p-10'>
-            <div className=''>
+        <footer className='w-full grid lg:grid-cols-2 md:grid-cols-1 p-10'>
+            <div className=' lg:mb-0 mb-20'>
                 <p className='font-bold text-lg mb-2'>Contact Us</p>
                 <p className=' text-gray-400'>
                 Shri Madhwa Vadiraja Institute of<br></br>
@@ -23,15 +23,15 @@ export default function Footer() {
             </div>
             <div className=' flex flex-wrap justify-center w-full'>
                 <p className='font-bold text-lg text-center mb-2 w-full'>Quick Links</p>
-                <div className='w-full flex text-center flex-col gap-4 text-gray-400'>
+                <div className='w-full flex text-center lg:mb-0 mb-10 flex-col gap-4 text-gray-400'>
                     <a className='hover:underline' href="/vtour">Virtual Tour</a>
                     <a className='hover:underline' href="/register">Register</a>
                     <a className='hover:underline' href="/gallery">Gallery</a>
                 </div>
                 <div className='flex gap-3'>
-                    <i className='uil uil-facebook text-3xl'></i>
-                    <i className='uil uil-instagram text-3xl'></i>
-                    <i className='uil uil-twitter text-3xl'></i>
+                    <i className='uil uil-facebook text-3xl cursor-pointer'></i>
+                    <i className='uil uil-instagram text-3xl cursor-pointer'></i>
+                    <i className='uil uil-twitter text-3xl cursor-pointer'></i>
                 </div>
             </div>
         </footer>
