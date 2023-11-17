@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className='dark bg-black'>
+    <html lang="en" className=''>
       <head>
         <link
           rel="preload"
