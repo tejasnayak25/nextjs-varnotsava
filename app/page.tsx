@@ -34,11 +34,11 @@ function getImages() {
 export default async function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-16 px-0">
-      <div className="z-10 max-w-5xl w-full lg:h-full h-fit font-mono text-sm">
+      <div className="z-10 max-w-5xl w-full lg:h-full h-fit font-mono text-sm mb-20">
         
 
-        <div className='flex flex-col justify-center items-center w-full -mt-36 h-3/6 top-0 left-0'>
-          <img src={Lamp.src} alt="" className=' lg:w-3/6 w-full lg:mt-40 mt-36 lg:-ml-20 -ml-7' style={{filter: "brightness(80%) contrast(1.2) blur(0.2px)"}}></img>
+        <div className='flex flex-col justify-center items-center w-full -mt-28 h-3/6 top-0 left-0'>
+          <img src={Lamp.src} alt="" className=' lg:w-3/6 w-full lg:mt-0 mt-36 lg:-ml-24 -ml-7' style={{filter: "brightness(80%) contrast(1.2) blur(0.2px)"}}></img>
           <div className='absolute flex flex-col justify-center'>
             <p className=' lg:text-8xl text-3xl' style={{fontFamily: "WaterLily"}}>VARNOTSAVA - 2K23</p>
             <p className=' lg:text-xl text-base text-center mt-3' style={{fontFamily: "Kollektif"}}>The Festival of Joy is Back!</p>
