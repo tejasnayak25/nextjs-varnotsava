@@ -34,10 +34,10 @@ function getImages() {
 export default async function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-16 px-0">
-      <div className="z-10 max-w-5xl w-full h-full font-mono text-sm" style={{height: "100vh"}}>
+      <div className="z-10 max-w-5xl w-full lg:h-full h-fit font-mono text-sm">
         
 
-        <div className='flex flex-col justify-center items-center w-full h-3/6 top-0 left-0'>
+        <div className='flex flex-col justify-center items-center w-full -mt-36 h-3/6 top-0 left-0'>
           <img src={Lamp.src} alt="" className=' lg:w-3/6 w-full lg:mt-40 mt-36 lg:-ml-20 -ml-7' style={{filter: "brightness(80%) contrast(1.2) blur(0.2px)"}}></img>
           <div className='absolute flex flex-col justify-center'>
             <p className=' lg:text-8xl text-3xl' style={{fontFamily: "WaterLily"}}>VARNOTSAVA - 2K23</p>
@@ -53,8 +53,8 @@ export default async function Home() {
 
       </div>
 
-      <div className=' w-full flex flex-col justify-center items-center' style={{height:"100vh"}}>
-        <img src={Flow.src} alt="" className=' w-4/6' style={{filter: "brightness(70%) contrast(1) blur(0.2px)", marginLeft: "-100px"}}></img>
+      <div className=' w-full lg:h-full h-fit mb-48 flex flex-col justify-center items-center'>
+        <img src={Flow.src} alt="" className=' lg:w-4/6 w-full lg:-ml-20 ml-0' style={{filter: "brightness(70%) contrast(1) blur(0.2px)"}}></img>
         <div className='absolute'>
           <div className=' flex lg:flex-row flex-col gap-5 items-center'>
             <p className='lg:text-8xl text-5xl' style={{fontFamily: "WaterLily", textShadow: " -5px 0 1px #00ffff, 5px 0 1px #ff00ff"}}>1000</p>
@@ -66,17 +66,17 @@ export default async function Home() {
         </div>
       </div>
 
-      <div className=' w-full flex flex-col justify-center items-center' style={{height:"150vh"}}>
+      <div className=' w-full flex flex-col mb-52 justify-center items-center lg:h-full h-fit'>
         <p className='lg:text-6xl text-3xl' style={{fontFamily: "WaterLily"}}>WHEN?</p>
 
-        <div className='flex lg:flex-row flex-col lg:gap-10 gap-5 mt-20'>
+        <div className='flex lg:flex-row flex-col lg:gap-10 gap-5 lg:mt-20 mt-10'>
           <p className='lg:text-7xl text-center text-4xl lg:px-10 px-5 lg:py-6 py-3 bg-white text-black' style={{fontFamily: "WaterLily"}}>20</p>
           <p className='lg:text-7xl text-center text-4xl lg:px-20 px-5 lg:py-6 py-3 bg-white text-black' style={{fontFamily: "WaterLily"}}>DECEMBER</p>
           <p className='lg:text-7xl text-center text-4xl lg:px-14 px-5 lg:py-6 py-3 bg-white text-black' style={{fontFamily: "WaterLily"}}>2023</p>
         </div>
       </div>
 
-      <div className=' w-full flex flex-col justify-center items-center' style={{height:"150vh"}}>
+      <div className=' w-full flex flex-col mb-52 justify-center items-center lg:h-full h-fit'>
         <p className='lg:text-6xl text-3xl' style={{fontFamily: "WaterLily"}}>WHERE?</p>
 
         <div className='flex flex-col gap-10 lg:mt-20 mt-10 w-full'>
@@ -85,7 +85,7 @@ export default async function Home() {
         </div>
       </div>
 
-      <div className=' w-full flex flex-col justify-center items-center' style={{height:"200vh"}}>
+      <div className=' w-full flex flex-col mb-52 justify-center items-center lg:h-full h-fit'>
         <p className='lg:text-6xl text-3xl' style={{fontFamily: "WaterLily"}}>Location</p>
 
         <div className='flex flex-col gap-10 lg:mt-20 mt-10 w-full'>
@@ -94,7 +94,7 @@ export default async function Home() {
         </div>
       </div>
 
-      <div className=' w-full flex flex-col justify-center items-center' style={{height:"200vh"}}>
+      <div className=' w-full flex flex-col mb-20 justify-center items-center lg:h-full h-fit'>
         <div className="relative flex items-center w-full">
           <p className='lg:text-6xl text-3xl w-full text-center' style={{fontFamily: "WaterLily"}}>Gallery</p>
           <span className="absolute right-10 lg:text-xl text-xs mt-2 underline"><a href="/gallery">View More</a></span>
