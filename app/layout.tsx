@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className=' dark bg-black text-white'>
+    <html lang="en" className=''>
       <head>
         <link
           rel="preload"
@@ -34,7 +34,7 @@ export default function RootLayout({
         </script> */}
 
       </head>
-      <body className={inter.className + "bg-black text-white"}>
+      <body className={inter.className}>
         <div className={"p-10"}>
           <Header/>
         </div>
