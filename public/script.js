@@ -40,6 +40,12 @@ document.querySelectorAll("header ul #menu a").forEach(elem => {
 //     console.log(res);
 // });
 
+if(location.pathname === "/register") {
+    document.getElementById("sendmail").onclick = () => {
+        document.getElementById("sentmail").classList.replace("hidden", "flex");
+    }
+}
+
 document.getElementById("showMenu").onclick = () => {
     let menu = document.getElementById("menu"),
     btn = document.getElementById("showMenu").querySelector("span");
