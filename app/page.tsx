@@ -38,10 +38,10 @@ export default async function Home() {
         
 
         <div className='flex flex-col justify-center items-center w-full h-3/6 top-0 left-0'>
-          <img src={Lamp.src} alt="" className=' w-3/6 mt-52' style={{filter: "brightness(80%) contrast(1.2) blur(0.2px)", marginLeft: "-100px"}}></img>
+          <img src={Lamp.src} alt="" className=' lg:w-3/6 w-full lg:mt-40 mt-36 lg:-ml-20 -ml-7' style={{filter: "brightness(80%) contrast(1.2) blur(0.2px)"}}></img>
           <div className='absolute flex flex-col justify-center'>
-            <p className=' text-8xl' style={{fontFamily: "WaterLily"}}>VARNOTSAVA - 2K23</p>
-            <p className=' text-xl text-center mt-3' style={{fontFamily: "Kollektif"}}>The Festival of Joy is Back!</p>
+            <p className=' lg:text-8xl text-3xl' style={{fontFamily: "WaterLily"}}>VARNOTSAVA - 2K23</p>
+            <p className=' lg:text-xl text-base text-center mt-3' style={{fontFamily: "Kollektif"}}>The Festival of Joy is Back!</p>
             <div className='w-full flex justify-center mt-5'>
               <button className='btn rounded-full border-0 text-black w-52' style={{backgroundColor: "#ff9b9b", fontFamily: "monospace"}}>KNOW MORE</button>
             </div>
@@ -56,9 +56,9 @@ export default async function Home() {
       <div className=' w-full flex flex-col justify-center items-center' style={{height:"100vh"}}>
         <img src={Flow.src} alt="" className=' w-4/6' style={{filter: "brightness(70%) contrast(1) blur(0.2px)", marginLeft: "-100px"}}></img>
         <div className='absolute'>
-          <div className=' flex gap-5 items-center'>
-            <p className='text-8xl' style={{fontFamily: "WaterLily", textShadow: " -5px 0 1px #00ffff, 5px 0 1px #ff00ff"}}>1000</p>
-            <p className='text-6xl' style={{fontFamily: "WaterLily"}}>Events Registered</p>
+          <div className=' flex lg:flex-row flex-col gap-5 items-center'>
+            <p className='lg:text-8xl text-5xl' style={{fontFamily: "WaterLily", textShadow: " -5px 0 1px #00ffff, 5px 0 1px #ff00ff"}}>1000</p>
+            <p className='lg:text-6xl text-3xl' style={{fontFamily: "WaterLily"}}>Events Registered</p>
           </div>
           <div className='w-full flex justify-center mt-10'>
               <button className='btn rounded-full border-0 text-black w-52' style={{backgroundColor: "#ff9b9b", fontFamily: "monospace"}}>REGISTER NOW</button>
@@ -67,39 +67,39 @@ export default async function Home() {
       </div>
 
       <div className=' w-full flex flex-col justify-center items-center' style={{height:"150vh"}}>
-        <p className='text-6xl' style={{fontFamily: "WaterLily"}}>WHEN?</p>
+        <p className='lg:text-6xl text-3xl' style={{fontFamily: "WaterLily"}}>WHEN?</p>
 
-        <div className='flex gap-10 mt-20'>
-          <p className='text-7xl px-10 py-6 bg-white text-black' style={{fontFamily: "WaterLily"}}>20</p>
-          <p className='text-7xl px-20 py-6 bg-white text-black' style={{fontFamily: "WaterLily"}}>DECEMBER</p>
-          <p className='text-7xl px-14 py-6 bg-white text-black' style={{fontFamily: "WaterLily"}}>2023</p>
+        <div className='flex lg:flex-row flex-col lg:gap-10 gap-5 mt-20'>
+          <p className='lg:text-7xl text-center text-4xl lg:px-10 px-5 lg:py-6 py-3 bg-white text-black' style={{fontFamily: "WaterLily"}}>20</p>
+          <p className='lg:text-7xl text-center text-4xl lg:px-20 px-5 lg:py-6 py-3 bg-white text-black' style={{fontFamily: "WaterLily"}}>DECEMBER</p>
+          <p className='lg:text-7xl text-center text-4xl lg:px-14 px-5 lg:py-6 py-3 bg-white text-black' style={{fontFamily: "WaterLily"}}>2023</p>
         </div>
       </div>
 
       <div className=' w-full flex flex-col justify-center items-center' style={{height:"150vh"}}>
-        <p className='text-6xl' style={{fontFamily: "WaterLily"}}>WHERE?</p>
+        <p className='lg:text-6xl text-3xl' style={{fontFamily: "WaterLily"}}>WHERE?</p>
 
-        <div className='flex flex-col gap-10 mt-20 w-full'>
-          <img className='w-full h-96 object-cover' src="/images/college.jpeg" alt=""></img>
-          <p className='w-full text-center text-3xl' style={{fontFamily: "futura"}}>SHRI MADHWA VADIRAJA INSTITUTE OF TECHNOLOGY AND MANAGEMENT</p>
+        <div className='flex flex-col gap-10 lg:mt-20 mt-10 w-full'>
+          <img className='w-full lg:h-96 h-52 object-cover' src="/images/college.jpeg" alt=""></img>
+          <p className='w-full text-center lg:text-3xl text-lg lg:px-0 px-5' style={{fontFamily: "futura"}}>SHRI MADHWA VADIRAJA INSTITUTE OF TECHNOLOGY AND MANAGEMENT</p>
         </div>
       </div>
 
       <div className=' w-full flex flex-col justify-center items-center' style={{height:"200vh"}}>
-        <p className='text-6xl' style={{fontFamily: "WaterLily"}}>Location</p>
+        <p className='lg:text-6xl text-3xl' style={{fontFamily: "WaterLily"}}>Location</p>
 
-        <div className='flex flex-col gap-10 mt-20 w-full'>
+        <div className='flex flex-col gap-10 lg:mt-20 mt-10 w-full'>
         {/* <iframe src="https://maps.google.com/maps?q=Tangesir%20Dates%20Products&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" className="aspect-video w-full" allowFullScreen></iframe> */}
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3883.533048775052!2d74.7828841209411!3d13.254594899526166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbcaffcb81452c5%3A0xb18b6b77e04b088b!2sShri%20Madhwa%20Vadiraja%20Institute%20of%20Technology%20and%20Management!5e0!3m2!1sen!2sin!4v1700063261394!5m2!1sen!2sin"  className="aspect-video w-full" style={{border:0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3883.533048775052!2d74.7828841209411!3d13.254594899526166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbcaffcb81452c5%3A0xb18b6b77e04b088b!2sShri%20Madhwa%20Vadiraja%20Institute%20of%20Technology%20and%20Management!5e0!3m2!1sen!2sin!4v1700063261394!5m2!1sen!2sin"  className="lg:aspect-video aspect-auto lg:h-auto h-96 w-full" style={{border:0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
 
       <div className=' w-full flex flex-col justify-center items-center' style={{height:"200vh"}}>
         <div className="relative flex items-center w-full">
-          <p className='text-6xl w-full text-center' style={{fontFamily: "WaterLily"}}>Gallery</p>
-          <span className="absolute right-10 underline"><a href="/gallery">View More</a></span>
+          <p className='lg:text-6xl text-3xl w-full text-center' style={{fontFamily: "WaterLily"}}>Gallery</p>
+          <span className="absolute right-10 lg:text-xl text-xs mt-2 underline"><a href="/gallery">View More</a></span>
         </div>
-        <div className="grid grid-cols-3 justify-center gap-5 p-10">
+        <div className="grid lg:grid-cols-3 grid-cols-1 justify-center lg:gap-5 gap-3 lg:p-10 p-5">
           {getImages()}
         </div>
       </div>
