@@ -1,6 +1,8 @@
 // import Image from 'next/image'
 import { NovusBase } from "@/lib/models"
 import { Form } from "@/lib/form"
+import YourComponent2 from './submit';
+// import { Request } from "node-fetch"
 
 export default async function Home() {
   return (
@@ -36,6 +38,7 @@ export default async function Home() {
                     <textarea name="team_name" id="team_name" className="textarea bg-slate-700 text-slate-400 lg:rounded-3xl rounded-2xl lg:p-5 lg:px-5 px-5 p-2 w-full" placeholder="Team Member Details (Name, Branch, Section, Roll No) (Including Team Leader)"></textarea>
                     <div className="w-full flex justify-center mt-10">
                         <button id="sendmail" className='btn rounded-full border-0 text-black w-52' style={{backgroundColor: "#ff9b9b", fontFamily: "monospace"}}>REGISTER</button>
+                        {/* <YourComponent2/> */}
                     </div>
                 </div>
             </div>

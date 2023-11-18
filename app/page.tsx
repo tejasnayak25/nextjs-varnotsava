@@ -42,8 +42,9 @@ export default async function Home() {
           <div className='absolute flex flex-col justify-center'>
             <p className=' lg:text-8xl text-3xl' style={{fontFamily: "WaterLily"}}>VARNOTSAVA - 2K23</p>
             <p className=' lg:text-xl text-base text-center mt-3' style={{fontFamily: "Kollektif"}}>The Festival of Joy is Back!</p>
-            <div className='w-full flex justify-center mt-5'>
-              <button className='btn rounded-full border-0 text-black w-52' style={{backgroundColor: "#ff9b9b", fontFamily: "monospace"}}>KNOW MORE</button>
+            <div className='w-full flex lg:flex-row flex-col gap-3 justify-center items-center mt-8'>
+              <button className='btn lg:btn-md btn-sm rounded-full border-0 text-black lg:w-52 w-40' style={{backgroundColor: "#ff9b9b", fontFamily: "monospace"}}>KNOW MORE</button>
+              <a  href="/vtour" className='btn lg:btn-md btn-sm bg-white text-slate-900 uppercase rounded-full border-0 text-black lg:w-52 w-40' style={{fontFamily: "monospace"}}>Virtual Tour</a>
             </div>
           </div>
         </div>
