@@ -25,6 +25,7 @@ export default async function Home({
                     margin : 7,
                     width : 175
                 };
+                console.log(newid);
                 // let url = await toDataURL(newid, qrOption)
                 // send(info.email, `<img src="./image.jpg" alt="" className="w-100 mb-10 lg:mb-0" />`);
                 send(info.email, `<p>${newid}</p>`)
