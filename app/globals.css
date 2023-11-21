@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.bg-pink-red {
+  background-color: #ff9b9b;
+}
+
 @font-face {
   font-family: 'WaterLily';
   src: url('/fonts/waterlily.ttf');

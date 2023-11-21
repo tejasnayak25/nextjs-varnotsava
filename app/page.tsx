@@ -1,8 +1,8 @@
 // import Image from 'next/image'
-import { NovusBase } from "@/lib/models"
-import { Form } from "@/lib/form"
+// import { Form } from "@/lib/form"
 import Lamp from "@/public/images/lamp.png"
 import Flow from "@/public/images/flow.png"
+import Carousel from "./carousel"
 // import localFont from 'next/font/local'
 // import * as fs from 'fs'
 
@@ -48,10 +48,10 @@ export default async function Home() {
             </div>
           </div>
         </div>
+      </div>
 
-        
-        
-
+      <div className=' w-full lg:h-full h-fit mb-48 flex flex-col justify-center items-center'>
+        <Carousel/>
       </div>
 
       <div className=' w-full lg:h-full h-fit mb-48 flex flex-col justify-center items-center'>
