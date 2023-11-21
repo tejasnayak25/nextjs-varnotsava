@@ -28,7 +28,7 @@ export async function POST(req: NextRequest, res:NextResponse) {
                     <p class=" w-100 text-center p-5 bold">Varnotsava - 2K23</p>
                     <p class=" mb-3">We have received a registration request for the ${data.event} event</p>
                     <p class=" mb-6">Click the button below to confirm your registration</p>
-                    <a href="https://nextjs-varnotsava.vercel.app/register/confirm?id=${data.team_name}_${data.event}" class=" btn btn-primary mb-6">Confirm Registration</a>
+                    <a href="https://nextjs-varnotsava.vercel.app/register/confirm?id=${data.team_name}_${data.event}" class=" btn btn-primary mb-6">Confirm Registration</a><br>
                     <p class="text-muted">Powered by FeatureX</p>
                 </div>
             </body>
