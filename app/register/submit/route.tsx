@@ -24,7 +24,7 @@ export async function POST(req: NextRequest, res:NextResponse) {
             <p class=" w-100 text-center p-5 bold">Varnotsava - 2K23</p>
             <p class=" mb-3">We have received a registration request for the ${data.event} event</p>
             <p class=" mb-6">Click the button below to confirm your registration</p>
-            <a class=" btn btn-primary mb-6">Confirm Registration</a>
+            <a href="/register/confirm?id=${data.team_name}_${data.event}" class=" btn btn-primary mb-6">Confirm Registration</a>
             <p class="text-muted">Powered by FeatureX</p>
         </div>
     `)
