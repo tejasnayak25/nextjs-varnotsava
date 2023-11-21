@@ -5,10 +5,10 @@ import { send } from '@/lib/sendmail';
 
 let registration = collection(Registration);
 
-export async function POST(req, res) {
+export async function POST(req: NextRequest, res:NextResponse) {
     if (req.method !== 'POST') {
-        res.status(405).send({ message: 'Only POST requests allowed' })
-        return
+        // res.status(405).send({ message: 'Only POST requests allowed' })
+        return NextResponse.json({ message: 'Only POST requests allowed' })
       }
       // not needed in NextJS v12+
     let data = await new Response(req.body).json();
@@ -29,5 +29,5 @@ export async function POST(req, res) {
         </div>
     `)
     
-    return res.status(200).json({"data":"Confirmation mail has been sent to your email."});
+    return NextResponse.json({"data":"Confirmation mail has been sent to your email."});
 }
