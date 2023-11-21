@@ -29,5 +29,5 @@ export async function POST(req, res) {
         </div>
     `)
     
-    return "Confirmation mail has been sent to your email.";
+    return Response.json({data:"Confirmation mail has been sent to your email."});
 }
