@@ -29,7 +29,5 @@ export async function POST(req, res) {
         </div>
     `)
     
-    return NextResponse.json({
-        data: "Confirmation mail has been sent to your email."
-    });
+    return "Confirmation mail has been sent to your email.";
 }
