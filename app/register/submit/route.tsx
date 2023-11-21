@@ -18,7 +18,7 @@ export async function POST(req, res) {
         verified: "False"
     });
 
-    send(data.email, `
+    await send(data.email, `
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <div class="w-100 d-flex justify-content-center bg-black text-white">
             <p class=" w-100 text-center p-5 bold">Varnotsava - 2K23</p>
