@@ -32,7 +32,7 @@ export default async function Home({
                     width : 175
                 };
                 
-                let url = await toFile(`${serverPath('/public/qrcodes/'+id+'.png')}`, newid);
+                let url = await toFile(`./qrcodes/${id}.png`, newid);
                 console.log(url);
                 send(info.email, `
                 <html>
