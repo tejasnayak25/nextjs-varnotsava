@@ -22,12 +22,10 @@ export default async function AdminPage({
       
 
       if(list) {
-        console.log(list);
         for(let i of list) {
-          console.log(list[i]);
           let templist = [];
-          for(let j of Object.keys(JSON.parse(list[i]))) {
-            templist.push(<td>{JSON.stringify(JSON.parse(list[i])[j]) || ""}</td>)
+          for(let j of Object.values(i)) {
+            templist.push(<td>{JSON.stringify(j) || ""}</td>)
           }
   
           code.push(<tr>{templist}</tr>);
