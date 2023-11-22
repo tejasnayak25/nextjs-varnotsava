@@ -40,7 +40,7 @@ export default async function AdminPage({
     }
 
     return (
-      <main className="p-16">
+      <main className="lg:p-16 p-5">
         <p className="lg:text-xl lg:mb-10 mb-7">Welcome, Admin <span className=" absolute right-16"><button id="downloadXL" className="btn bg-pink-red text-black hover:text-white">Download .xlsx</button></span></p>
 
         <table id="data-table" className="w-full table max-w-full lg:overflow-x-auto overflow-x-scroll">
@@ -58,6 +58,7 @@ export default async function AdminPage({
           </tbody>
         </table>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script src="https://cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
         <script src="/downloadXL.js"></script>
       </main>
