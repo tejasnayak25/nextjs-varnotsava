@@ -26,7 +26,7 @@ export default async function Home({
                     margin : 7,
                     width : 175
                 };
-                
+                console.log(__dirname);
                 let url = await toFile(`../../../public/qrcodes/${id}.png`, newid);
                 console.log(url);
                 send(info.email, `
