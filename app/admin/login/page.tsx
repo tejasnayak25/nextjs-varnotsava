@@ -1,14 +1,26 @@
-// pages/index.js or your component file
-import dynamic from 'next/dynamic';
+// components/LoginButton.js
+import { useState } from 'react';
 
-const DynamicLoginButton = dynamic(() => import('@/app/components/LoginButton'), {
-    ssr: false,
-});
+export default function LoginButton() {
+    const [isClicked, setIsClicked] = useState(false);
 
-export default function Login() {
+    const handleClick = async () => {
+        setIsClicked(true);
+
+        // Trigger serverless function to handle server-side logic
+        await fetch('/api/sendCred', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            // You can pass any necessary data here
+            body: JSON.stringify({}),
+        });
+    };
+
     return (
-        <div className="p-5 flex justify-center items-center">
-            <DynamicLoginButton />
-        </div>
+        <button onClick={handleClick} className="btn bg-pink-red text-slate-900 hover:text-white">
+            {isClicked ? 'Credentials Sent' : 'Send Credentials'}
+        </button>
     );
 }
