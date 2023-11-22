@@ -9,7 +9,7 @@ export default function LoginButton() {
         setIsClicked(true);
 
         // Trigger serverless function to handle server-side logic
-        await fetch('/admin/sendcred', {
+        await fetch('/api/sendcred', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

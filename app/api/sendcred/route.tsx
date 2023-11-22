@@ -5,7 +5,7 @@ import { NextResponse } from "next/server";
 
 let admincollec = collection(Admin);
 
-export default async function sendCred() {
+export default async function POST() {
     let credentials = await admincollec.doc("credentials").get();
     let data = credentials.data() || {};
 
