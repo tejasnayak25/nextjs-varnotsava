@@ -19,12 +19,13 @@ export default async function AdminPage({
       let code = [];
 
       let list = await readAll();
-      console.log(list.length);
+      
 
       if(list) {
+        console.log(list);
         for(let i of list) {
+          console.log(list[i]);
           let templist = [];
-          console.log(Object.keys(JSON.parse(list[i])));
           for(let j of Object.keys(JSON.parse(list[i]))) {
             templist.push(<td>{JSON.stringify(JSON.parse(list[i])[j]) || ""}</td>)
           }
