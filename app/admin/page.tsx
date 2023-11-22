@@ -1,4 +1,5 @@
 import { collection } from "@/lib/firebase-admin";
+import { readAll } from "@/lib/gform";
 import { Admin } from "@/lib/models";
 import { redirect } from "next/navigation";
 let admincollec = collection(Admin);
@@ -14,15 +15,42 @@ export default async function AdminPage({
     let data = await credentials.data() || {};
     let pass = data !== undefined ? data["pass"] : "";
 
-    console.log(id, pass);
+    async function getRegs() {
+      let code = [];
+
+      let list = await readAll();
+
+      for(let i of list) {
+        let templist = [];
+        for(let j of list[i].values) {
+          templist.push(<td>j</td>)
+        }
+
+        code.push(<tr>{templist}</tr>);
+      }
+
+      return code;
+    }
 
     if(id !== pass) {
       redirect("/admin/login");
     }
 
     return (
-      <main>
-        <p>Welcome, Admin</p>
+      <main className="p-5">
+        <p className="lg:text-xl mb-5">Welcome, Admin</p>
+
+        <table>
+          <tr>
+            <th>Team Name</th>
+            <th>Email</th>
+            <th>Branch</th>
+            <th>Event</th>
+            <th>Team Details</th>
+          </tr>
+
+          {await getRegs()}
+        </table>
       </main>
     )
 }
