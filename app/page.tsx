@@ -1,22 +1,7 @@
-// import Image from 'next/image'
-// import { Form } from "@/lib/form"
 import Lamp from "@/public/images/lamp.png"
 import Flow from "@/public/images/flow.png"
 import Carousel from "./carousel"
-// import localFont from 'next/font/local'
-// import * as fs from 'fs'
-
-// const Lamp = {src:"https://th.bing.com/th/id/OIP.mFuXoMcAqbvUwjDjwTkFHAHaHa?pid=ImgDet&rs=1"};
-// const Flow = {src:"https://th.bing.com/th/id/OIP.mFuXoMcAqbvUwjDjwTkFHAHaHa?pid=ImgDet&rs=1"};
-
-// const surt = localFont({
-//   src: [
-//     {path: '../public/fonts/waterlily.regular.ttf'}
-//   ],
-//   variable: '--font-waterlily',
-// })
-
-// const waterlily = localFont({src: '../public/fonts/waterlily.regular.ttf'})
+import { count } from "@/lib/gform"
 
 var images = ["image1.jpeg", "image2.jpeg", "image3.jpeg", "image4.jpeg"]
 
@@ -58,7 +43,7 @@ export default async function Home() {
         <img src={Flow.src} alt="" className=' lg:w-4/6 w-full lg:-ml-20 ml-0' style={{filter: "brightness(70%) contrast(1) blur(0.2px)"}}></img>
         <div className='absolute'>
           <div className=' flex lg:flex-row flex-col gap-5 items-center'>
-            <p className='lg:text-8xl text-5xl' style={{fontFamily: "WaterLily", textShadow: " -5px 0 1px #00ffff, 5px 0 1px #ff00ff"}}>1000</p>
+            <p className='lg:text-8xl text-5xl' style={{fontFamily: "WaterLily", textShadow: " -5px 0 1px #00ffff, 5px 0 1px #ff00ff"}}>{await count()}</p>
             <p className='lg:text-6xl text-3xl' style={{fontFamily: "WaterLily"}}>Events Registered</p>
           </div>
           <div className='w-full flex justify-center mt-10'>
