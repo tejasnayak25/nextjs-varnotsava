@@ -1,6 +1,6 @@
 import { collection } from "@/lib/firebase-admin";
 import { Admin } from "@/lib/models";
-import { NextResponse } from "next/server";
+import { redirect } from "next/navigation";
 let admincollec = collection(Admin);
 
 export default async function AdminPage({
@@ -15,7 +15,7 @@ export default async function AdminPage({
     let pass = data === undefined ? data["pass"] : "";
 
     if(id !== pass) {
-      return NextResponse.redirect("https://nextjs-varnotsava.vercel.app/admin/login");
+      redirect("/admin/login");
     }
 
     return (
