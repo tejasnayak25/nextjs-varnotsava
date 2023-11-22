@@ -25,7 +25,7 @@ export default async function AdminPage({
         for(let i of list) {
           let templist = [];
           for(let j of Object.values(i)) {
-            templist.push(<td>{JSON.stringify(j) || ""}</td>)
+            templist.push(<td className=" table-cell">{JSON.stringify(j).split('"')[1] || ""}</td>)
           }
   
           code.push(<tr>{templist}</tr>);
@@ -40,16 +40,16 @@ export default async function AdminPage({
     }
 
     return (
-      <main className="p-5">
-        <p className="lg:text-xl mb-5">Welcome, Admin</p>
+      <main className="p-16">
+        <p className="lg:text-xl lg:mb-10 mb-7">Welcome, Admin</p>
 
-        <table>
-          <tr>
-            <th>Team Name</th>
-            <th>Email</th>
-            <th>Branch</th>
-            <th>Event</th>
-            <th>Team Details</th>
+        <table className="w-full table">
+          <tr className=" table-row">
+            <th className=" table-cell">Team Name</th>
+            <th className=" table-cell">Email</th>
+            <th className=" table-cell">Branch</th>
+            <th className=" table-cell">Event</th>
+            <th className=" table-cell">Team Details</th>
           </tr>
 
           {await getRegs()}
