@@ -1,4 +1,4 @@
-import { collection } from "@/lib/firebase-admin";
+import { collection, fbaseAdmin } from "@/lib/firebase-admin";
 import { Admin } from "@/lib/models";
 import { send } from "@/lib/sendmail";
 
