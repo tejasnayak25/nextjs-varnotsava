@@ -11,12 +11,14 @@ export default async function login() {
 
         let email = data["email"] || "";
         let pass = email + "_Admin_" + Date.now();
+
+        console.log(email);
         
         admincollec.doc("credentials").update({
             pass: String(pass)
         });
         
-        send(email, `
+        await send(email, `
         <p>Varnotsava Admin: <a href="https://nextjs-varnotsava.vercel.app/admin?id=${pass}">Login</a></p>
         `);
         return undefined;
