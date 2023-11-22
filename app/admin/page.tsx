@@ -24,9 +24,9 @@ export default async function AdminPage({
       if(list) {
         for(let i of list) {
           let templist = [];
-          console.log(Object.keys(list[i]));
-          for(let j of Object.keys(list[i])) {
-            templist.push(<td>{JSON.stringify(list[i][j]) || ""}</td>)
+          console.log(Object.keys(JSON.parse(list[i])));
+          for(let j of Object.keys(JSON.parse(list[i]))) {
+            templist.push(<td>{JSON.stringify(JSON.parse(list[i])[j]) || ""}</td>)
           }
   
           code.push(<tr>{templist}</tr>);
