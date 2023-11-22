@@ -15,7 +15,7 @@ export default async function AdminPage({
     let pass = data === undefined ? data["pass"] : "";
 
     if(id !== pass) {
-        return NextResponse.redirect("/admin/login");
+        return NextResponse.redirect("https://nextjs-varnotsava.vercel.app/admin/login");
     }
 
     return (
