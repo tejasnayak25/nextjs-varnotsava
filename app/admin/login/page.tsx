@@ -7,25 +7,24 @@ let admincollec = collection(Admin);
 export default async function login() {
     async function sendCred() {
         let credentials = await admincollec.doc("credentials").get();
-        let data = credentials.data() || "";
+        let data = credentials.data() || {};
 
-        let email = data === undefined ? data["email"] : "";
+        let email = data["email"] || "";
         let pass = email + "_Admin_" + Date.now();
         
-        // admincollec.doc("credentials").update({
-        //     pass: String(pass)
-        // });
+        admincollec.doc("credentials").update({
+            pass: String(pass)
+        });
         
-        // send(email, `
-        // <p>Varnotsava Admin: <a href="https://nextjs-varnotsava.vercel.app/admin?id=${pass}">Login</a></p>
-        // `);
-        return JSON.stringify(data);
+        send(email, `
+        <p>Varnotsava Admin: <a href="https://nextjs-varnotsava.vercel.app/admin?id=${pass}">Login</a></p>
+        `);
+        return undefined;
     }
     sendCred();
     return (
         <div className="p-5 flex justify-center items-center">
-            {/* <button onClick={await sendCred()} className="btn bg-pink-red">Send Credentials</button> */}
-            <p className="hidden">{await sendCred()}</p>
+            <button onClick={await sendCred()} className="btn bg-pink-red text-slate-900 hover:text-white">Send Credentials</button>
         </div>
     )
 }
