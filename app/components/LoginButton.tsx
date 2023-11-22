@@ -1,3 +1,5 @@
+"use client";
+
 import { collection, fbaseAdmin } from "@/lib/firebase-admin";
 import { Admin } from "@/lib/models";
 import { send } from "@/lib/sendmail";
