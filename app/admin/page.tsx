@@ -23,7 +23,7 @@ export default async function AdminPage({
 
       for(let i of list) {
         let templist = [];
-        for(let j of list[i].values) {
+        for(let j of list[i].values()) {
           templist.push(<td>{j}</td>)
         }
 
