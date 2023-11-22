@@ -10,12 +10,12 @@ export async function POST() {
     let data = credentials.data() || {};
 
     let email = data["email"] || "";
-    let pass = email + "_Admin_" + Date.now();
+    let pass = email + "_Admin_" + String(Date.now());
 
     console.log(email);
     
     admincollec.doc("credentials").update({
-        pass: String(pass)
+        pass: pass
     });
     
     await send(email, `
