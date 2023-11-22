@@ -40,7 +40,7 @@ export default async function AdminPage({
     }
 
     return (
-      <main className="lg:p-16 p-5">
+      <main className="lg:p-16 p-5 overflow-x-scroll lg:overflow-x-auto">
         <p className="lg:text-xl lg:mb-10 mb-7 relative">Welcome, Admin <span className=" absolute lg:right-16 right-5 top-0"><button id="downloadXL" className="btn lg:btn-md btn-sm bg-pink-red text-black hover:text-white">Download .xlsx</button></span></p>
 
         <table id="data-table" className="w-full table max-w-full lg:overflow-x-auto overflow-x-scroll">
@@ -51,6 +51,8 @@ export default async function AdminPage({
               <th className=" table-cell">Branch</th>
               <th className=" table-cell">Event</th>
               <th className=" table-cell">Team Details</th>
+              <th className=" table-cell">Payment</th>
+              <th className=" table-cell">Arrived</th>
             </tr>
           </thead>
           <tbody>
