@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutPage = () => {
   return (
-    <div className="bg-slate-900 min-h-screen p-8">
+    <div className="bg-black min-h-screen p-8">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-4xl font-bold mb-6">About Our Institution</h1>
 
