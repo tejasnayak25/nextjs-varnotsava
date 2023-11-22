@@ -19,11 +19,12 @@ export default async function AdminPage({
       let code = [];
 
       let list = await readAll();
+      console.log(list);
 
       for(let i of list) {
         let templist = [];
         for(let j of list[i].values) {
-          templist.push(<td>j</td>)
+          templist.push(<td>{j}</td>)
         }
 
         code.push(<tr>{templist}</tr>);
