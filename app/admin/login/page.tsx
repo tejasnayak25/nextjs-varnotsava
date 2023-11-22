@@ -20,8 +20,10 @@ export default function LoginButton() {
     };
 
     return (
-        <button onClick={handleClick} className="btn bg-pink-red text-slate-900 hover:text-white">
-            {isClicked ? 'Credentials Sent' : 'Send Credentials'}
-        </button>
+        <div className='p-5 lg:pb-20 pb-40'>
+            <button onClick={handleClick} className="btn bg-pink-red text-slate-900 hover:text-white">
+                {isClicked ? 'Credentials Sent' : 'Send Credentials'}
+            </button>
+        </div>
     );
 }

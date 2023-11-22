@@ -14,6 +14,8 @@ export default async function AdminPage({
     let data = await credentials.data() || "";
     let pass = data === undefined ? data["pass"] : "";
 
+    console.log(id, pass);
+
     if(id !== pass) {
       redirect("/admin/login");
     }
