@@ -4,8 +4,10 @@ import { useRouter } from 'next/navigation';
 import { put } from '@/lib/gform';
 import { send } from '@/lib/sendmail';
 import { toFile } from "qrcode";
-import path from 'path'
-import getConfig from 'next/config'
+import path from 'path';
+import * as fs from "fs";
+import getConfig from 'next/config';
+
 
 const serverPath = (staticFilePath: string) => {
   return path.join(getConfig().serverRuntimeConfig.PROJECT_ROOT, staticFilePath)
@@ -31,6 +33,10 @@ export default async function Home({
                     margin : 7,
                     width : 175
                 };
+
+                if(!fs.existsSync("./qrcodes")) {
+                   fs.mkdirSync("./qrcodes") ;
+                }
                 
                 let url = await toFile(`./qrcodes/${id}.png`, newid);
                 console.log(url);
