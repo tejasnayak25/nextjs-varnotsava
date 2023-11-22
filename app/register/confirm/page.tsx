@@ -19,7 +19,7 @@ export default async function Home({
         let data = value.data();
         if(data) {
             let info = JSON.parse(data['data']);
-            console.log(data, info);
+            console.log(info.email);
             // let newid = await put(info);
             // if(newid) {
             //     const qrOption = { 
@@ -54,7 +54,7 @@ export default async function Home({
 
     return (
       <main className="flex flex-col items-center p-16 lg:pt-10 pt-5 px-0">
-            <p className="mb-7 lg:px-0 md:px-3 text-center">Confirmation Successful! An email with the QR-Code has been sent to your mail.</p>
+            <p className="mb-7 lg:px-0 px-3 text-center">Confirmation Successful! An email with the QR-Code has been sent to your mail.</p>
             <div>
                 <a href="/" className=" btn btn-neutral rounded-full px-14 bg-pink-red border-0 text-slate-900 hover:text-white">Return Home</a>
             </div>
