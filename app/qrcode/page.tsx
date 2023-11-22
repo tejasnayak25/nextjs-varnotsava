@@ -18,7 +18,9 @@ export default async function Home({
     
     let row = await qrcodes.doc(id).get();
     let data = row.data();
-    let url = data ? data.url : "";
+    let url = data !== undefined ? data.url : "";
+
+    console.log(url);
 
     return NextResponse.redirect(url);
 }
