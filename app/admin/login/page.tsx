@@ -1,3 +1,5 @@
+"use client";
+
 // components/LoginButton.js
 import { useState } from 'react';
 
