@@ -1,10 +1,14 @@
 // pages/index.js or your component file
-import LoginButton from '@/app/components/LoginButton';
+import dynamic from 'next/dynamic';
+
+const DynamicLoginButton = dynamic(() => import('@/app/components/LoginButton'), {
+    ssr: false,
+});
 
 export default function Login() {
     return (
         <div className="p-5 flex justify-center items-center">
-            <LoginButton />
+            <DynamicLoginButton />
         </div>
     );
 }
