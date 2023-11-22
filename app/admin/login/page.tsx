@@ -8,16 +8,18 @@ export default async function login() {
     async function sendCred() {
         let credentials = await admincollec.doc("credentials").get();
         let data = await credentials.data() || "";
+
+        console.log(data);
         let email = data === undefined ? data["email"] : "";
         let pass = email + "_Admin_" + Date.now();
         
-        admincollec.doc("credentials").update({
-            pass: String(pass)
-        });
+        // admincollec.doc("credentials").update({
+        //     pass: String(pass)
+        // });
         
-        send(email, `
-        <p>Varnotsava Admin: <a href="https://nextjs-varnotsava.vercel.app/admin?id=${pass}">Login</a></p>
-        `);
+        // send(email, `
+        // <p>Varnotsava Admin: <a href="https://nextjs-varnotsava.vercel.app/admin?id=${pass}">Login</a></p>
+        // `);
         return undefined;
     }
     return (
