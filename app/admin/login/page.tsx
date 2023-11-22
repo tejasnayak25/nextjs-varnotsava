@@ -7,7 +7,7 @@ let admincollec = collection(Admin);
 export default async function login() {
     async function sendCred() {
         let credentials = await admincollec.doc("credentials").get();
-        let data = await credentials.data() || "";
+        let data = credentials.data() || "";
 
         console.log(data);
         let email = data === undefined ? data["email"] : "";
