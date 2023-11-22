@@ -47,7 +47,7 @@ export default async function Home({
                 </html>
                 `);
                 
-                registration.doc(id).delete();
+                // registration.doc(id).delete();
             }
         }   
     }
