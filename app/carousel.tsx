@@ -1,49 +1,42 @@
-"use client";
-
-import React, { useEffect } from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import React, { useState } from 'react';
 
 const Carousel = () => {
-  useEffect(() => {
-    // Importing react-slick styles on the client side
-    // import('slick-carousel/slick/slick.css');
-    // import('slick-carousel/slick/slick-theme.css');
-  }, []);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+  const slides = [
+    "/images/college/image1.jpeg",
+    "/images/college/image2.jpeg",
+    "/images/college/image3.jpeg",
+    "/images/college/image4.jpeg",
+  ];
+
+  const nextSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
   };
 
-  function getSlides() {
-    let code = [];
-    let list = [
-      { image: "/images/college/image1.jpeg" },
-      { image: "/images/college/image2.jpeg" },
-      { image: "/images/college/image3.jpeg" },
-      { image: "/images/college/image4.jpeg" },
-    ];
-
-    for (let item of list) {
-      code.push(
-        <div key={item.image}>
-          <img src={item.image} className="w-full" alt="..." />
-        </div>
-      );
-    }
-
-    return code;
-  }
+  const prevSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide - 1 + slides.length) % slides.length);
+  };
 
   return (
-    <Slider {...settings}>
-      {getSlides()}
-    </Slider>
+    <div className="relative">
+      <div className="overflow-hidden">
+        <div className="flex transition-transform duration-500 ease-in-out transform translate-x-full" style={{ width: `${slides.length * 100}%`, transform: `translateX(-${currentSlide * (100 / slides.length)}%)` }}>
+          {slides.map((image, index) => (
+            <div key={index} className="w-full flex-shrink-0">
+              <img src={image} alt={`Slide ${index + 1}`} className="w-full h-auto" />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <button onClick={prevSlide} className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">
+        &lt;
+      </button>
+      <button onClick={nextSlide} className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">
+        &gt;
+      </button>
+    </div>
   );
 };
 
