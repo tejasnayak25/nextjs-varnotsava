@@ -22,6 +22,8 @@ export default async function Home({
 
     console.log(url);
 
-    return NextResponse.redirect(url);
+    return (
+        <img src='url'></img>
+    );
 }
   
