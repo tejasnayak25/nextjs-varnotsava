@@ -39,3 +39,10 @@ document.getElementById("showMenu").onclick = () => {
 function remInterval(interval) {
     clearInterval(interval);
 }
+
+
+document.querySelectorAll("#menu a").forEach(a => {
+    if(a.getAttribute("href") === location.pathname) {
+        a.classList.add("color-pink-red");
+    }
+});

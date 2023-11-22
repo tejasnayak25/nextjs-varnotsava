@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <div className='w-full'>
         <footer className='w-full grid lg:grid-cols-2 md:grid-cols-1 p-10'>
-            <div className=' lg:mb-0 mb-20'>
+            <div id='contact' className=' lg:mb-0 mb-20'>
                 <p className='font-bold text-lg mb-2'>Contact Us</p>
                 <p className=' text-gray-400'>
                 Shri Madhwa Vadiraja Institute of<br></br>
@@ -29,9 +29,9 @@ export default function Footer() {
                     <a className='hover:underline' href="/gallery">Gallery</a>
                 </div>
                 <div className='flex gap-3'>
-                    <i className='uil uil-facebook text-3xl cursor-pointer'></i>
-                    <i className='uil uil-instagram text-3xl cursor-pointer'></i>
-                    <i className='uil uil-twitter text-3xl cursor-pointer'></i>
+                    <a href="https://www.facebook.com/officialsmvitm"><i className='uil uil-facebook text-3xl cursor-pointer'></i></a>
+                    <a href="https://www.instagram.com/smvitm.sode/"><i className='uil uil-instagram text-3xl cursor-pointer'></i></a>
+                    <a href="https://twitter.com/SmvitM"><i className='uil uil-twitter text-3xl cursor-pointer'></i></a>
                 </div>
             </div>
         </footer>
