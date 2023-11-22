@@ -4,7 +4,12 @@ import { useRouter } from 'next/navigation';
 import { put } from '@/lib/gform';
 import { send } from '@/lib/sendmail';
 import { toFile } from "qrcode";
+import path from 'path'
+import getConfig from 'next/config'
 
+const serverPath = (staticFilePath: string) => {
+  return path.join(getConfig().serverRuntimeConfig.PROJECT_ROOT, staticFilePath)
+}
 
 let registration = collection(Registration);
 
@@ -26,8 +31,8 @@ export default async function Home({
                     margin : 7,
                     width : 175
                 };
-                console.log(__dirname);
-                let url = await toFile(`/public/qrcodes/${id}.png`, newid);
+                
+                let url = await toFile(`${serverPath('/public/qrcodes/'+id+'.png')}`, newid);
                 console.log(url);
                 send(info.email, `
                 <html>
