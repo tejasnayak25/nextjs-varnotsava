@@ -11,10 +11,16 @@ export default async function Home() {
           method: 'POST',
           headers: myHeaders,
           body: raw,
-          redirect: 'follow'
+          redirect: 'follow',
+          url: process.env.DRIVE_LINK
         };
         
-        let response = await fetch(process.env.DRIVE_LINK, requestOptions)
+        let response = await fetch(process.env.DRIVE_LINK || "", {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+        })
         let restext = await response.text();
         let result = JSON.parse(restext).data;
         
