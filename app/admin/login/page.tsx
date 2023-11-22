@@ -4,7 +4,7 @@ import { send } from "@/lib/sendmail";
 
 let admincollec = collection(Admin);
 
-export default async function login() {
+export default async function Login() {
     async function sendCred() {
         let credentials = await admincollec.doc("credentials").get();
         let data = credentials.data() || {};
@@ -24,9 +24,13 @@ export default async function login() {
         return undefined;
     }
 
+    const handleClick = async () => {
+        await sendCred();
+    };
+
     return (
         <div className="p-5 flex justify-center items-center">
-            <button onClick={sendCred} className="btn bg-pink-red text-slate-900 hover:text-white">Send Credentials</button>
+            <button onClick={handleClick} className="btn bg-pink-red text-slate-900 hover:text-white">Send Credentials</button>
         </div>
     )
 }
