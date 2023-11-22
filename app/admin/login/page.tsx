@@ -23,7 +23,7 @@ export default async function login() {
         `);
         return undefined;
     }
-    sendCred();
+    
     return (
         <div className="p-5 flex justify-center items-center">
             <button onClick={await sendCred()} className="btn bg-pink-red text-slate-900 hover:text-white">Send Credentials</button>
