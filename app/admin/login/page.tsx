@@ -1,10 +1,14 @@
 import { collection, fbaseAdmin } from "@/lib/firebase-admin";
 import { Admin } from "@/lib/models";
 import { send } from "@/lib/sendmail";
+// components/LoginButton.js
+import { useEffect, useState } from 'react';
 
 let admincollec = collection(Admin);
 
-export default async function Login() {
+export default function LoginButton() {
+    const [isClicked, setIsClicked] = useState(false);
+
     async function sendCred() {
         let credentials = await admincollec.doc("credentials").get();
         let data = credentials.data() || {};
@@ -25,12 +29,19 @@ export default async function Login() {
     }
 
     const handleClick = async () => {
+        setIsClicked(true);
         await sendCred();
     };
 
+    useEffect(() => {
+        if (isClicked) {
+            // Perform any post-click logic here
+        }
+    }, [isClicked]);
+
     return (
-        <div className="p-5 flex justify-center items-center">
-            <button onClick={handleClick} className="btn bg-pink-red text-slate-900 hover:text-white">Send Credentials</button>
-        </div>
-    )
+        <button onClick={handleClick} className="btn bg-pink-red text-slate-900 hover:text-white">
+            {isClicked ? 'Credentials Sent' : 'Send Credentials'}
+        </button>
+    );
 }
