@@ -27,6 +27,8 @@ export default function RootLayout({
         />
         <link rel="stylesheet" href="/material-icons.css" />
         <link rel="stylesheet" href="/header.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-symbols@0.14.1/index.min.css"></link>
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"></link>
         {/* <script async defer

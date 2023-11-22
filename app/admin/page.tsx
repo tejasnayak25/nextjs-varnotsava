@@ -58,8 +58,6 @@ export default async function AdminPage({
           </tbody>
         </table>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-        <script src="https://cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
         <script src="/downloadXL.js"></script>
       </main>
     )
