@@ -9,7 +9,6 @@ export default async function login() {
         let credentials = await admincollec.doc("credentials").get();
         let data = credentials.data() || "";
 
-        console.log(data);
         let email = data === undefined ? data["email"] : "";
         let pass = email + "_Admin_" + Date.now();
         
@@ -20,12 +19,13 @@ export default async function login() {
         // send(email, `
         // <p>Varnotsava Admin: <a href="https://nextjs-varnotsava.vercel.app/admin?id=${pass}">Login</a></p>
         // `);
-        return undefined;
+        return JSON.stringify(data);
     }
     sendCred();
     return (
         <div className="p-5 flex justify-center items-center">
-            <button onClick={await sendCred()} className="btn bg-pink-red">Send Credentials</button>
+            {/* <button onClick={await sendCred()} className="btn bg-pink-red">Send Credentials</button> */}
+            <p className="hidden">{await sendCred()}</p>
         </div>
     )
 }
