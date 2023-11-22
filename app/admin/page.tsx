@@ -21,13 +21,16 @@ export default async function AdminPage({
       let list = await readAll();
       console.log(list.length);
 
-      for(let i of list) {
-        let templist = [];
-        for(let j of Object.keys(list[i])) {
-          templist.push(<td>{JSON.stringify(list[i][j]) || ""}</td>)
+      if(list) {
+        for(let i of list) {
+          let templist = [];
+          console.log(Object.keys(list[i]));
+          for(let j of Object.keys(list[i])) {
+            templist.push(<td>{JSON.stringify(list[i][j]) || ""}</td>)
+          }
+  
+          code.push(<tr>{templist}</tr>);
         }
-
-        code.push(<tr>{templist}</tr>);
       }
 
       return code;
