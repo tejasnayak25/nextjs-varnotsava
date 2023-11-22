@@ -14,11 +14,11 @@ export default async function AdminPage({
     let data = await credentials.data() || "";
     let pass = data === undefined ? data["pass"] : "";
 
-    console.log(id, pass);
+    console.log(id, data);
 
-    if(id !== pass) {
-      redirect("/admin/login");
-    }
+    // if(id !== pass) {
+    //   redirect("/admin/login");
+    // }
 
     return (
       <main>
