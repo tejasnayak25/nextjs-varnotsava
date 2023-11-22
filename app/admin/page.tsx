@@ -11,14 +11,14 @@ export default async function AdminPage({
     let id = searchParams["id"];
 
     let credentials = await admincollec.doc("credentials").get();
-    let data = await credentials.data() || "";
-    let pass = data === undefined ? data["pass"] : "";
+    let data = await credentials.data() || {};
+    let pass = data !== undefined ? data["pass"] : "";
 
-    console.log(id, data);
+    console.log(id, pass);
 
-    // if(id !== pass) {
-    //   redirect("/admin/login");
-    // }
+    if(id !== pass) {
+      redirect("/admin/login");
+    }
 
     return (
       <main>
