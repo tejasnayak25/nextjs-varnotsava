@@ -64,7 +64,6 @@ document.getElementById("downloadXL").onclick = () => {
            location.href = (location.href + "&qr="+result);
         });
       };
-        
      }
      // you have to declare the file loading
      reader.readAsDataURL(file);
