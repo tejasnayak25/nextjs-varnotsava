@@ -24,9 +24,8 @@ export default async function AdminPage({
       if(qrid) {
         qrdata = await readOne(qrid);
         console.log(qrdata);
-      }
-      
-      return (<div id="scanned" className={"fixed top-0 left-0 w-full h-full flex justify-center items-center z-30 bg-black bg-opacity-70"}>
+
+        return (<div id="scanned" className={"fixed top-0 left-0 w-full h-full flex justify-center items-center z-30 bg-black bg-opacity-70"}>
       <div className=" card bg-slate-800 p-2 rounded-md">
           <div className="card-body">
               <p className=" lg:mx-0 mx-2">Registration Details</p>
@@ -54,6 +53,9 @@ export default async function AdminPage({
           </div>
       </div>
 </div>);
+      }
+      
+      return undefined;
     }
 
     async function getRegs() {
