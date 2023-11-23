@@ -20,14 +20,14 @@ export default async function AdminPage({
     let pass = data !== undefined ? data["pass"] : "";
 
     async function getOne(qrid:string) {
-      let qrdata = {};
+      let qrdata;
       if(qrid) {
-        qrdata = await readOne(qrid);
+        qrdata = await readOne(qrid) || {};
         let edit = await update(qrid);
         let code = [];
         
         for(let i of Object.values(qrdata)) {
-          code.push(<td className="table-cell">{i || ""}</td>)
+          code.push(<td className="table-cell">{JSON.stringify(i)}</td>)
         }
 
         code.push(<a href={edit}>Edit</a>)
