@@ -41,12 +41,13 @@ function exportTableToExcel(tableId, filename = 'excelFile') {
     var reader  = new FileReader();
     // it's onload event and you forgot (parameters)
     reader.onload = function(e)  {
+      let img = document.createElement(e.target.result);
 
         // the result image data
         const uint8Array = dataUrlToUint8ClampedArray(e.target.result);
 
 
-        const code = jsQR(uint8Array);
+        const code = jsQR(uint8Array, img.width, img.height);
 
         if (code) {
           console.log("Found QR code", code);
