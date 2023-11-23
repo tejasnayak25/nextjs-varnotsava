@@ -110,7 +110,7 @@ export default async function AdminPage({
                 </div>
         </div>
 
-        <script src="/jsQR.js"></script>
+        
         <script src="/downloadXL.js"></script>
       </main>
     )
