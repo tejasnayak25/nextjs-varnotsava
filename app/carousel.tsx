@@ -13,11 +13,11 @@ const Carousel = () => {
   ];
 
   const nextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+    setCurrentSlide((prevSlide) => (prevSlide + 1));
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide - 1 + slides.length) % slides.length);
+    setCurrentSlide((prevSlide) => (prevSlide - 1));
   };
 
   return (
