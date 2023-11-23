@@ -35,43 +35,43 @@ function exportTableToExcel(tableId, filename = 'excelFile') {
     document.getElementById("qr-scanner").click();
   }
 
-  let scanner = document.getElementById("qr-scanner");
-  scanner.onchange = () => {
-    var file = scanner.files[0];
-    var reader  = new FileReader();
-    // it's onload event and you forgot (parameters)
-    reader.onload = function(e)  {
+  // let scanner = document.getElementById("qr-scanner");
+  // scanner.onchange = () => {
+  //   var file = scanner.files[0];
+  //   var reader  = new FileReader();
+  //   // it's onload event and you forgot (parameters)
+  //   reader.onload = function(e)  {
 
-        // the result image data
-        const uint8Array = dataUrlToUint8ClampedArray(e.target.result);
+  //       // the result image data
+  //       const uint8Array = dataUrlToUint8ClampedArray(e.target.result);
 
 
-        const code = jsQR(uint8Array);
+  //       const code = jsQR(uint8Array);
 
-        if (code) {
-          console.log("Found QR code", code);
-        }
+  //       if (code) {
+  //         console.log("Found QR code", code);
+  //       }
         
-     }
-     // you have to declare the file loading
-     reader.readAsDataURL(file);
-  }
+  //    }
+  //    // you have to declare the file loading
+  //    reader.readAsDataURL(file);
+  // }
   
-  function dataUrlToUint8ClampedArray(dataUrl) {
-    // Extract the base64-encoded data from the data URL
-    const base64Data = dataUrl.split(',')[1];
+  // function dataUrlToUint8ClampedArray(dataUrl) {
+  //   // Extract the base64-encoded data from the data URL
+  //   const base64Data = dataUrl.split(',')[1];
   
-    // Decode the base64 data into a binary string
-    const binaryString = atob(base64Data);
+  //   // Decode the base64 data into a binary string
+  //   const binaryString = atob(base64Data);
   
-    // Create a Uint8ClampedArray from the binary string
-    const length = binaryString.length;
-    const uint8Array = new Uint8ClampedArray(length);
+  //   // Create a Uint8ClampedArray from the binary string
+  //   const length = binaryString.length;
+  //   const uint8Array = new Uint8ClampedArray(length);
     
-    for (let i = 0; i < length; i++) {
-      uint8Array[i] = binaryString.charCodeAt(i);
-    }
+  //   for (let i = 0; i < length; i++) {
+  //     uint8Array[i] = binaryString.charCodeAt(i);
+  //   }
   
-    return uint8Array;
-  }
+  //   return uint8Array;
+  // }
   
