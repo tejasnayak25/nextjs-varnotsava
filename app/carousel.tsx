@@ -15,7 +15,6 @@ const Carousel = () => {
   const nextSlide = () => {
     if(currentSlide === 3) {
       setCurrentSlide((prevSlide) => (prevSlide - 3));
-
     } else {
       setCurrentSlide((prevSlide) => (prevSlide + 1));
     }
