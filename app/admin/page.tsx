@@ -99,7 +99,7 @@ export default async function AdminPage({
                           </thead>
                           <tbody>
                             <tr>
-                              {await getOne(qr)}
+                              {/* {await getOne(qr)} */}
                             </tr>
                           </tbody>
                         </table>
