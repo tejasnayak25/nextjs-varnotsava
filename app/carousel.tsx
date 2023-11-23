@@ -23,7 +23,7 @@ const Carousel = () => {
   return (
     <div className="relative">
       <div className="overflow-hidden">
-        <div className="flex transition-transform duration-500 ease-in-out transform" style={{ width: `100%`, transform: `translateX(-${currentSlide * (100 / slides.length)}%)` }}>
+        <div className="flex transition-transform duration-500 ease-in-out transform" style={{ width: `100%`, transform: `translateX(-${currentSlide * (100*2 / slides.length)}%)` }}>
           {slides.map((image, index) => (
             <div key={index} className="w-full flex-shrink-0">
               <img src={image} alt={`Slide ${index + 1}`} className="w-full max-h-96 object-contain aspect-video" />
