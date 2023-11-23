@@ -32,8 +32,8 @@ export default async function AdminPage({
 
         code.push(<a href={edit} className=" btn bg-pink-red text-black hover:text-white">Edit</a>)
 
-        return (<div id="scanned" className={"fixed top-0 left-0 w-full h-full flex justify-center items-center z-30 bg-black bg-opacity-70"}>
-      <div className=" card bg-slate-800 p-2 rounded-md">
+        return (<div id="scanned" className={"fixed top-0 left-0 w-full h-full max-w-full flex justify-center items-center z-30 bg-black bg-opacity-70"}>
+      <div className=" card bg-slate-800 p-2 rounded-md relative max-w-full">
           <div className="card-body max-w-full overflow-x-scroll">
               <p className=" lg:mx-0 mx-2">Registration Details</p>
               <table className="table w-full max-w-full overflow-x-scroll">
