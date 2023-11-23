@@ -23,9 +23,37 @@ export default async function AdminPage({
       let qrdata = {};
       if(qrid) {
         qrdata = await readOne(qrid);
+        console.log(qrdata);
       }
       
-      return (<p>{JSON.stringify(Object.values(qrdata))}</p>);
+      return (<div id="scanned" className={"fixed top-0 left-0 w-full h-full flex justify-center items-center z-30 bg-black bg-opacity-70"}>
+      <div className=" card bg-slate-800 p-2 rounded-md">
+          <div className="card-body">
+              <p className=" lg:mx-0 mx-2">Registration Details</p>
+              <table className="table w-full">
+                <thead>
+                  <tr className=" table-row">
+                  <th className=" table-cell">Team Name</th>
+                  <th className=" table-cell">Email</th>
+                  <th className=" table-cell">Branch</th>
+                  <th className=" table-cell">Event</th>
+                  <th className=" table-cell">Team Details</th>
+                  <th className=" table-cell">Payment</th>
+                  <th className=" table-cell">Arrived</th>
+                </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    {JSON.stringify(qrdata)}
+                  </tr>
+                </tbody>
+              </table>
+              <div className="w-full flex justify-center mt-5">
+                  <a href="/" className='btn rounded-full border-0 text-black w-52' style={{backgroundColor: "#ff9b9b", fontFamily: "monospace"}}>RETURN TO HOME</a>
+              </div>
+          </div>
+      </div>
+</div>);
     }
 
     async function getRegs() {
@@ -81,34 +109,7 @@ export default async function AdminPage({
           </tbody>
         </table>
 
-        <div id="scanned" className={"fixed top-0 left-0 w-full h-full "+hidden+" justify-center items-center z-30 bg-black bg-opacity-70"}>
-                <div className=" card bg-slate-800 p-2 rounded-md">
-                    <div className="card-body">
-                        <p className=" lg:mx-0 mx-2">Registration Details</p>
-                        <table className="table w-full">
-                          <thead>
-                            <tr className=" table-row">
-                            <th className=" table-cell">Team Name</th>
-                            <th className=" table-cell">Email</th>
-                            <th className=" table-cell">Branch</th>
-                            <th className=" table-cell">Event</th>
-                            <th className=" table-cell">Team Details</th>
-                            <th className=" table-cell">Payment</th>
-                            <th className=" table-cell">Arrived</th>
-                          </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              {/* {await getOne(qr)} */}
-                            </tr>
-                          </tbody>
-                        </table>
-                        <div className="w-full flex justify-center mt-5">
-                            <a href="/" className='btn rounded-full border-0 text-black w-52' style={{backgroundColor: "#ff9b9b", fontFamily: "monospace"}}>RETURN TO HOME</a>
-                        </div>
-                    </div>
-                </div>
-        </div>
+        {await getOne(qr)}
 
         <script src="/qcode-decoder.min.js"></script>
         <script src="/downloadXL.js"></script>

@@ -51,7 +51,7 @@ function exportTableToExcel(tableId, filename = 'excelFile') {
         qr.decodeFromImage(img, function (err, result) {
            if (err) throw err;
 
-           alert(result);
+           location.href = (location.href + "&qr="+result);
         });
       };
         
