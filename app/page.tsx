@@ -36,7 +36,15 @@ export default async function Home() {
       </div>
 
       <div className=' w-full lg:h-full h-fit mb-48 flex flex-col justify-center items-center'>
-        <Carousel/>
+        <div className='absolute flex flex-col justify-center'>
+            <p className=' lg:text-8xl text-3xl mb-8' style={{fontFamily: "WaterLily"}}>Events</p>
+
+            <Carousel/>
+
+            <div className='w-full flex lg:flex-row flex-col gap-3 justify-center items-center mt-8'>
+              <a href="/events" className='btn lg:btn-md btn-sm rounded-full border-0 text-black lg:w-52 w-40 uppercase' style={{backgroundColor: "#ff9b9b", fontFamily: "monospace"}}>View Events</a>
+            </div>
+          </div>
       </div>
 
       <div className=' w-full lg:h-full h-fit mb-48 flex flex-col justify-center items-center'>

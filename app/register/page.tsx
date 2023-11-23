@@ -25,12 +25,14 @@ export default async function Home() {
                             <option value="CVE">CVE</option>
                         </select>
                         <select name="event" id="event" className="select bg-slate-700 text-slate-400 rounded-full w-full">
+                            <option value="Electrocuted">Electrocuted</option>
+                            <option value="Code Troopers Code Contest">Code Troopers Code Contest</option>
+                            <option value="Robo Soccer">Robo Soccer</option>
+                            <option value="BGMI">BGMI</option>
+                            <option value="Tech Pursuit (IT treasure hunt)">Tech Pursuit (IT treasure hunt)</option>
+                            <option value="Paper Presentation">Paper Presentation</option>
                             <option value="Line Follower">Line Follower</option>
-                            <option value="WebCraft">WebCraft</option>
-                            <option value="AIML">AIML</option>
-                            <option value="AIDS">AIDS</option>
-                            <option value="ME">ME</option>
-                            <option value="CVE">CVE</option>
+                            <option value="Robo Race">Robo Race</option>
                         </select>
                     </div>
                     <div className="lg:p-10 p-3 lg:mt-0 mt-2">

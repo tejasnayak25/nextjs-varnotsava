@@ -6,10 +6,10 @@ const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
-    "/images/college/image1.jpeg",
-    "/images/college/image2.jpeg",
-    "/images/college/image3.jpeg",
-    "/images/college/image4.jpeg",
+    "/images/events/image1.jpeg",
+    "/images/events/image2.jpeg",
+    "/images/events/image3.jpeg",
+    "/images/events/image4.jpeg",
   ];
 
   const nextSlide = () => {
@@ -26,7 +26,7 @@ const Carousel = () => {
         <div className="flex transition-transform duration-500 ease-in-out transform translate-x-full" style={{ width: `${slides.length * 100}%`, transform: `translateX(-${currentSlide * (100 / slides.length)}%)` }}>
           {slides.map((image, index) => (
             <div key={index} className="w-full flex-shrink-0">
-              <img src={image} alt={`Slide ${index + 1}`} className="w-full  max-h-96 object-cover aspect-video" />
+              <img src={image} alt={`Slide ${index + 1}`} className="w-full  lg:max-h-full max-h-96 object-cover aspect-video" />
             </div>
           ))}
         </div>
