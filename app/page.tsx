@@ -28,7 +28,7 @@ export default async function Home() {
             <p className=' lg:text-8xl text-3xl' style={{fontFamily: "WaterLily"}}>VARNOTSAVA - 2K23</p>
             <p className=' lg:text-xl text-base text-center mt-3' style={{fontFamily: "Kollektif"}}>The Festival of Joy is Back!</p>
             <div className='w-full flex lg:flex-row flex-col gap-3 justify-center items-center mt-8'>
-              <button className='btn btn-md rounded-full border-0 text-black lg:w-64 w-40' style={{backgroundColor: "#ff9b9b", fontFamily: "monospace"}}>KNOW MORE</button>
+              <a href="/events" className='btn btn-md rounded-full border-0 text-black lg:w-64 w-40' style={{backgroundColor: "#ff9b9b", fontFamily: "monospace"}}>KNOW MORE</a>
               <a  href="/vtour" className='btn btn-md bg-white uppercase rounded-full border-0 text-black lg:w-64 w-40' style={{fontFamily: "monospace"}}>Virtual Tour</a>
             </div>
           </div>
