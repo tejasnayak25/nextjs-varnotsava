@@ -1,5 +1,5 @@
 import { collection } from "@/lib/firebase-admin";
-import { readAll, readOne } from "@/lib/gform";
+import { readAll, readOne, update } from "@/lib/gform";
 import { Admin } from "@/lib/models";
 import { redirect } from "next/navigation";
 let admincollec = collection(Admin);
@@ -23,7 +23,14 @@ export default async function AdminPage({
       let qrdata = {};
       if(qrid) {
         qrdata = await readOne(qrid);
-        console.log(qrdata);
+        let edit = await update(qrid);
+        let code = [];
+        
+        for(let i of Object.values(qrdata)) {
+          code.push(<td className="table-cell">{i || ""}</td>)
+        }
+
+        code.push(<a href={edit}>Edit</a>)
 
         return (<div id="scanned" className={"fixed top-0 left-0 w-full h-full flex justify-center items-center z-30 bg-black bg-opacity-70"}>
       <div className=" card bg-slate-800 p-2 rounded-md">
@@ -37,13 +44,12 @@ export default async function AdminPage({
                   <th className=" table-cell">Branch</th>
                   <th className=" table-cell">Event</th>
                   <th className=" table-cell">Team Details</th>
-                  <th className=" table-cell">Payment</th>
-                  <th className=" table-cell">Arrived</th>
+                  <th className=" table-cell">Edit</th>
                 </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    {JSON.stringify(qrdata)}
+                    {code}
                   </tr>
                 </tbody>
               </table>
