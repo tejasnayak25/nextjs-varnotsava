@@ -34,9 +34,9 @@ export default async function AdminPage({
 
         return (<div id="scanned" className={"fixed top-0 left-0 w-full h-full flex justify-center items-center z-30 bg-black bg-opacity-70"}>
       <div className=" card bg-slate-800 p-2 rounded-md">
-          <div className="card-body">
+          <div className="card-body max-w-full overflow-x-scroll">
               <p className=" lg:mx-0 mx-2">Registration Details</p>
-              <table className="table w-full table-fixed">
+              <table className="table w-full max-w-full overflow-x-scroll">
                 <thead>
                   <tr className=" table-row">
                   <th className=" table-cell">Team Name</th>
@@ -100,7 +100,7 @@ export default async function AdminPage({
         </div>
         
 
-        <table id="data-table" className="w-full table table-fixed max-w-full lg:overflow-x-auto overflow-x-scroll">
+        <table id="data-table" className="w-full table max-w-full lg:overflow-x-auto overflow-x-scroll">
           <thead>
             <tr className=" table-row">
               <th className=" table-cell">Team Name</th>
