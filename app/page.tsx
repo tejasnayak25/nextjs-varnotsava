@@ -36,7 +36,7 @@ export default async function Home() {
       </div>
 
       <div className=' w-full lg:h-full h-fit mb-48 flex flex-col justify-center items-center'>
-        <div className='flex lg:flex-row flex-col gap-5 items-center'>
+        <div className='flex flex-col gap-5 items-center'>
             <p className=' lg:text-6xl text-3xl mb-8' style={{fontFamily: "WaterLily"}}>Events</p>
 
             <Carousel/>

@@ -56,7 +56,7 @@ export default async function AdminPage({
       <main className="lg:p-16 p-5 overflow-x-scroll lg:overflow-x-auto">
         <div className="flex justify-between lg:mb-10 mb-7">
           <p className="lg:text-xl relative">Welcome, Admin</p>
-          <div>
+          <div className=" flex lg:flex-row flex-col justify-center items-center gap-2">
           <button id="scanQr" className="btn lg:btn-md btn-sm bg-pink-red text-black hover:text-white">Scan QR</button>
           <input type="file" accept="image/*" name="qr-scanner" id="qr-scanner" className="hidden"></input>
           <button id="downloadXL" className="btn lg:btn-md btn-sm bg-pink-red text-black hover:text-white">Download .xlsx</button>
@@ -110,6 +110,7 @@ export default async function AdminPage({
                 </div>
         </div>
 
+        <script src="/jsQR.js"></script>
         <script src="/downloadXL.js"></script>
       </main>
     )
