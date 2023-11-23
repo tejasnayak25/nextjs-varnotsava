@@ -20,7 +20,7 @@ export async function POST() {
     
     await send(email, `
     <p>Varnotsava Admin: <a href="https://nextjs-varnotsava.vercel.app/admin?id=${pass}">Login</a></p>
-    `);
+    `, "Admin Credentials");
     return NextResponse.json({
         status: 200, 
         body: "hello"

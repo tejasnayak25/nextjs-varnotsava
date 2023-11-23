@@ -38,13 +38,14 @@ export default async function Home({
                             <img src="${url}" style="width:100%;" alt="" className="w-100 mb-10 lg:mb-0" />
                             <p class=" mb-3">Congratulations!! You have successfully registered for the ${info.event} event</p>
                             <p class=" mb-3">Use this QR Code for further processes.</p>
-                            <p class=" mb-6">If the QR Code is not visible, <a href="${url}">Click Me!</a></p>
+                            <p class=" mb-6">If the QR Code is not visible,</p>
+                            <a href="${url}">Click Me!</a>
                             <a href="https://nextjs-varnotsava.vercel.app/register/cancel?id=${newid}" class=" btn btn-primary mb-6">Cancel Registration</a><br>
                             <p class="text-muted">Powered by FeatureX</p>
                         </div>
                     </body>
                 </html>
-                `);
+                `, "Varnotsava | Registration - QR Code");
                 
                 registration.doc(id).delete();
             }

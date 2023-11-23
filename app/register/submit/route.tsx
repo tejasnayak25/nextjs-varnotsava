@@ -33,7 +33,7 @@ export async function POST(req: NextRequest, res:NextResponse) {
                 </div>
             </body>
         </html>
-    `)
+    `, "Varnotsava | Registration - Confirmation")
     
     return NextResponse.json({"data":"Confirmation mail has been sent to your email."});
 }
