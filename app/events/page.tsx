@@ -1,7 +1,8 @@
 export default function Home() {
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-16 px-5">
-            <p className=" text-lg lg:text-2xl relative w-full text-center">Technical Event Rules: INTER <span className="absolute right-3"><a download={"Event_Details.pdf"} href="https://docs.google.com/document/d/190y-uResmwuqF8VWinTZKGp9eGxFa4xrcHKxrvPNTz8/edit?usp=drive_link" className="btn bg-pink-red text-black hover:text-white">View PDF</a></span></p>
+        <main className="flex min-h-screen flex-col items-center justify-between p-16 pt-8 px-5">
+            <a download={"Event_Details.pdf"} href="https://docs.google.com/document/d/190y-uResmwuqF8VWinTZKGp9eGxFa4xrcHKxrvPNTz8/edit?usp=drive_link" className="btn bg-pink-red w-60 rounded-full lg:mb-16 mb-10 text-black hover:text-white">View PDF</a>
+            <p className=" text-lg lg:text-2xl relative w-full text-center">Technical Event Rules: INTER</p>
             <table className="table mb-10 w-full">
                 <thead>
                     <tr className="table-row">
