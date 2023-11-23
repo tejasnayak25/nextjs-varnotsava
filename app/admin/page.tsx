@@ -30,7 +30,7 @@ export default async function AdminPage({
           code.push(<td className="table-cell">{JSON.stringify(i).split('"')[1]}</td>)
         }
 
-        code.push(<a href={edit}>Edit</a>)
+        code.push(<a href={edit} className=" btn bg-pink-red text-black hover:text-white">Edit</a>)
 
         return (<div id="scanned" className={"fixed top-0 left-0 w-full h-full flex justify-center items-center z-30 bg-black bg-opacity-70"}>
       <div className=" card bg-slate-800 p-2 rounded-md">
@@ -53,8 +53,8 @@ export default async function AdminPage({
                   </tr>
                 </tbody>
               </table>
-              <div className="w-full flex justify-center mt-5">
-                  <a href="/" className='btn rounded-full border-0 text-black w-52' style={{backgroundColor: "#ff9b9b", fontFamily: "monospace"}}>RETURN TO HOME</a>
+              <div className="w-full flex justify-center items-center mt-5">
+                  <a href={"/admin?id=" + id} className='btn rounded-full border-0 text-black w-52' style={{backgroundColor: "#ff9b9b", fontFamily: "monospace"}}>CLOSE</a>
               </div>
           </div>
       </div>
