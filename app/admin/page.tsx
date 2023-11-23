@@ -27,7 +27,7 @@ export default async function AdminPage({
         let code = [];
         
         for(let i of Object.values(qrdata)) {
-          code.push(<td className="table-cell">{JSON.stringify(i)}</td>)
+          code.push(<td className="table-cell">{JSON.stringify(i).split('"')[1]}</td>)
         }
 
         code.push(<a href={edit}>Edit</a>)
@@ -36,7 +36,7 @@ export default async function AdminPage({
       <div className=" card bg-slate-800 p-2 rounded-md">
           <div className="card-body">
               <p className=" lg:mx-0 mx-2">Registration Details</p>
-              <table className="table w-full">
+              <table className="table w-full table-fixed">
                 <thead>
                   <tr className=" table-row">
                   <th className=" table-cell">Team Name</th>
@@ -100,7 +100,7 @@ export default async function AdminPage({
         </div>
         
 
-        <table id="data-table" className="w-full table max-w-full lg:overflow-x-auto overflow-x-scroll">
+        <table id="data-table" className="w-full table table-fixed max-w-full lg:overflow-x-auto overflow-x-scroll">
           <thead>
             <tr className=" table-row">
               <th className=" table-cell">Team Name</th>
