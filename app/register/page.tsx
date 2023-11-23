@@ -29,7 +29,7 @@ export default async function Home() {
                         </select>
                     </div>
                     <div className="lg:p-10 p-3 lg:mt-0 mt-2">
-                        <textarea name="team_details" id="team_details" className="textarea bg-slate-700 text-slate-400 lg:rounded-3xl rounded-2xl lg:p-5 lg:px-5 px-5 p-2 w-full" placeholder="Team Member Details (Name, Branch, Section, Roll No) (Including Team Leader)"></textarea>
+                        <textarea name="team_details" id="team_details" className="textarea bg-slate-700 text-slate-400 lg:rounded-3xl rounded-2xl lg:p-5 lg:px-5 px-5 p-2 w-full" placeholder="Team Member Details (Name, Email) (Including Team Leader)"></textarea>
                         <div className="w-full flex justify-center mt-10">
                             <button id="sendmail" type="submit" className='btn rounded-full border-0 text-black w-52' style={{backgroundColor: "#ff9b9b", fontFamily: "monospace"}}>REGISTER</button>
                             {/* <YourComponent2/> */}

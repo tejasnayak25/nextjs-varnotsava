@@ -3,7 +3,12 @@ document.getElementById("downloadXL").onclick = () => {
     fetch("/api/getxl")
     .then(async (res) => {
       let json = await res.json();
-      location.href = json.url;
+      
+      let a  = document.createElement("a");
+      a.download = "Varnotsava - Excel.xls";
+      a.href = json.url;
+
+      a.click();
     });
 }
 

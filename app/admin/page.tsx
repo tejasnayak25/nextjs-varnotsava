@@ -105,7 +105,7 @@ export default async function AdminPage({
             <tr className=" table-row">
               <th className=" table-cell">Team Name</th>
               <th className=" table-cell">Email</th>
-              <th className=" table-cell">Branch</th>
+              <th className=" table-cell">College Name</th>
               <th className=" table-cell">Event</th>
               <th className=" table-cell">Team Details</th>
               <th className=" table-cell">Payment</th>
