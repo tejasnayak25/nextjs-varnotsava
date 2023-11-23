@@ -42,7 +42,7 @@ export default async function Home() {
             <Carousel/>
 
             <div className='w-full flex lg:flex-row flex-col gap-3 justify-center items-center mt-8'>
-              <a href="/events" className='btn lg:btn-md btn-sm rounded-full border-0 text-black lg:w-52 w-40 uppercase' style={{backgroundColor: "#ff9b9b", fontFamily: "monospace"}}>View Events</a>
+              <a href="/events" className='btn btn-md rounded-full border-0 text-black lg:w-52 w-40 uppercase' style={{backgroundColor: "#ff9b9b", fontFamily: "monospace"}}>View Events</a>
             </div>
           </div>
       </div>
