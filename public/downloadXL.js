@@ -41,7 +41,8 @@ function exportTableToExcel(tableId, filename = 'excelFile') {
     var reader  = new FileReader();
     // it's onload event and you forgot (parameters)
     reader.onload = function(e)  {
-      let img = document.createElement(e.target.result);
+      let img = document.createElement("img");
+      img.src=e.target.result;
 
         // the result image data
         const uint8Array = dataUrlToUint8ClampedArray(e.target.result);
