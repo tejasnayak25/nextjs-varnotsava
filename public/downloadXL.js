@@ -44,15 +44,14 @@ function exportTableToExcel(tableId, filename = 'excelFile') {
       let img = document.createElement("img");
       img.src=e.target.result;
 
-        // the result image data
+      img.onload = function() {
+        // The image is loaded, now proceed with QR code decoding
         const uint8Array = dataUrlToUint8ClampedArray(e.target.result);
-
-
         const code = jsQR(uint8Array, img.width, img.height);
-
         if (code) {
           console.log("Found QR code", code);
         }
+      };
         
      }
      // you have to declare the file loading
