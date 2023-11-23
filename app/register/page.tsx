@@ -16,14 +16,7 @@ export default async function Home() {
                         <input type="text" name="team_name" id="team_name" className="input bg-slate-700 text-slate-400 rounded-full w-full" placeholder="Team Name" />
                         <input type="email" name="email" id="email" className="input bg-slate-700 text-slate-400 rounded-full w-full" placeholder="Email" />
                         
-                        <select name="branch" id="branch" className="select bg-slate-700 text-slate-400 rounded-full w-full">
-                            <option value="CSE">CSE</option>
-                            <option value="ECE">ECE</option>
-                            <option value="AIML">AIML</option>
-                            <option value="AIDS">AIDS</option>
-                            <option value="ME">ME</option>
-                            <option value="CVE">CVE</option>
-                        </select>
+                        <input type="text" name="college" id="college" className="input bg-slate-700 text-slate-400 rounded-full w-full" placeholder="College Name" />
                         <select name="event" id="event" className="select bg-slate-700 text-slate-400 rounded-full w-full">
                             <option value="Electrocuted">Electrocuted</option>
                             <option value="Code Troopers Code Contest">Code Troopers Code Contest</option>
