@@ -28,8 +28,8 @@ export default async function Home() {
             <p className=' lg:text-8xl text-3xl' style={{fontFamily: "WaterLily"}}>VARNOTSAVA - 2K23</p>
             <p className=' lg:text-xl text-base text-center mt-3' style={{fontFamily: "Kollektif"}}>The Festival of Joy is Back!</p>
             <div className='w-full flex lg:flex-row flex-col gap-3 justify-center items-center mt-8'>
-              <a href="/events" className='btn btn-md rounded-full border-0 text-black lg:w-64 w-40' style={{backgroundColor: "#ff9b9b", fontFamily: "monospace"}}>KNOW MORE</a>
-              <a  href="/vtour" className='btn btn-md bg-white uppercase rounded-full border-0 text-black lg:w-64 w-40' style={{fontFamily: "monospace"}}>Virtual Tour</a>
+              <a href="/events" className='btn btn-md rounded-full border-0 text-black lg:w-52 w-64' style={{backgroundColor: "#ff9b9b", fontFamily: "monospace"}}>KNOW MORE</a>
+              <a  href="/vtour" className='btn btn-md bg-white uppercase rounded-full border-0 text-black lg:w-52 w-64' style={{fontFamily: "monospace"}}>Virtual Tour</a>
             </div>
           </div>
         </div>
@@ -42,7 +42,7 @@ export default async function Home() {
             <Carousel/>
 
             <div className='w-full flex lg:flex-row flex-col gap-3 justify-center items-center mt-8'>
-              <a href="/events" className='btn btn-md rounded-full border-0 text-black lg:w-52 w-40 uppercase' style={{backgroundColor: "#ff9b9b", fontFamily: "monospace"}}>View Events</a>
+              <a href="/events" className='btn btn-md rounded-full border-0 text-black lg:w-52 w-64 uppercase' style={{backgroundColor: "#ff9b9b", fontFamily: "monospace"}}>View Events</a>
             </div>
           </div>
       </div>
