@@ -9,7 +9,7 @@ export default function Header() {
     <header className='w-full'>
           <ul className=' menu lg:menu-horizontal md:menu-vertical flex justify-center w-full items-center'>
             <div className='absolute left-7'>
-              <p className='lg:text-2xl text-xl' style={{fontFamily: "futura"}}>SMVITM</p>
+              <a href="/" className='lg:text-2xl text-xl' style={{fontFamily: "futura"}}>SMVITM</a>
             </div>
 
             <div id='menu' className='lg:flex z-40 hidden lg:flex-row flex-col lg:relative absolute lg:top-0 top-16 left-0 lg:w-auto w-full lg:pb-0 pb-8 lg:pt-0 pt-5 lg:px-0 px-10  lg:bg-transparent bg-black lg:gap-7 gap-4 text-lg font-mono'>
