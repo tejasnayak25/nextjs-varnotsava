@@ -39,7 +39,7 @@ export default async function Home({
                             <p class=" mb-3">Congratulations!! You have successfully registered for the ${info.event} event</p>
                             <p class=" mb-3">Use this QR Code for further processes.</p>
                             <p class=" mb-6">If the QR Code is not visible,</p>
-                            <a href="${url}">Click Me!</a>
+                            <a href="file://${url}">Click Me!</a><br>
                             <a href="https://nextjs-varnotsava.vercel.app/register/cancel?id=${newid}" class=" btn btn-primary mb-6">Cancel Registration</a><br>
                             <p class="text-muted">Powered by FeatureX</p>
                         </div>
