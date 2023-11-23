@@ -13,6 +13,7 @@ const Carousel = () => {
   ];
 
   const nextSlide = () => {
+    console.log(currentSlide);
     setCurrentSlide((prevSlide) => (prevSlide + 1));
   };
 
