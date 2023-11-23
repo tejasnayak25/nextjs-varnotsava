@@ -52,7 +52,7 @@ export default async function Home() {
         <div className='absolute'>
           <div className=' flex lg:flex-row flex-col gap-5 items-center'>
             <p className='lg:text-8xl text-5xl' style={{fontFamily: "WaterLily", textShadow: " -5px 0 1px #00ffff, 5px 0 1px #ff00ff"}}>{await count()}</p>
-            <p className='lg:text-6xl text-3xl' style={{fontFamily: "WaterLily"}}>Events Registered</p>
+            <p className='lg:text-6xl text-3xl' style={{fontFamily: "WaterLily"}}>Participants Registered</p>
           </div>
           <div className='w-full flex justify-center mt-10'>
               <button className='btn rounded-full border-0 text-black w-52' style={{backgroundColor: "#ff9b9b", fontFamily: "monospace"}}>REGISTER NOW</button>
