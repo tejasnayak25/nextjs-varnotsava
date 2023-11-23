@@ -1,5 +1,5 @@
 import { collection } from "@/lib/firebase-admin";
-import { readAll } from "@/lib/gform";
+import { readAll, readOne } from "@/lib/gform";
 import { Admin } from "@/lib/models";
 import { redirect } from "next/navigation";
 let admincollec = collection(Admin);
@@ -18,6 +18,15 @@ export default async function AdminPage({
     let credentials = await admincollec.doc("credentials").get();
     let data = await credentials.data() || {};
     let pass = data !== undefined ? data["pass"] : "";
+
+    async function getOne(qrid:string) {
+      let qrdata = {};
+      if(qrid) {
+        qrdata = await readOne(qrid);
+      }
+      
+      return (<p>{JSON.stringify(Object.values(qrdata))}</p>);
+    }
 
     async function getRegs() {
       let code = [];
@@ -90,7 +99,7 @@ export default async function AdminPage({
                           </thead>
                           <tbody>
                             <tr>
-                              
+                              {await getOne(qr)}
                             </tr>
                           </tbody>
                         </table>
