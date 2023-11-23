@@ -55,7 +55,7 @@ export default async function Home() {
             <p className='lg:text-6xl text-3xl' style={{fontFamily: "WaterLily"}}>Participants Registered</p>
           </div>
           <div className='w-full flex justify-center mt-10'>
-              <button className='btn rounded-full border-0 text-black w-52' style={{backgroundColor: "#ff9b9b", fontFamily: "monospace"}}>REGISTER NOW</button>
+              <a href="/register" className='btn rounded-full border-0 text-black w-52' style={{backgroundColor: "#ff9b9b", fontFamily: "monospace"}}>REGISTER NOW</a>
           </div>
         </div>
       </div>
