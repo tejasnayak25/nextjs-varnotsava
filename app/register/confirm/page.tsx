@@ -35,11 +35,8 @@ export default async function Home({
                     <body>
                         <div class="w-100 d-flex justify-content-center bg-black text-white">
                             <p class=" w-100 text-center p-5 bold">Varnotsava - 2K23</p>
-                            <img src="${url}" style="width:100%;" alt="" className="w-100 mb-10 lg:mb-0" />
                             <p class=" mb-3">Congratulations!! You have successfully registered for the ${info.event} event</p>
                             <p class=" mb-3">Use this QR Code for further processes.</p>
-                            <p class=" mb-6">If the QR Code is not visible,</p>
-                            <a href="file://${url}">Click Me!</a><br>
                             <a href="https://nextjs-varnotsava.vercel.app/register/cancel?id=${newid}" class=" btn btn-primary mb-6">Cancel Registration</a><br>
                             <p class="text-muted">Powered by FeatureX</p>
                         </div>
