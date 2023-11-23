@@ -45,7 +45,7 @@ export default async function Home({
                         </div>
                     </body>
                 </html>
-                `, "Varnotsava | Registration - QR Code");
+                `, "Varnotsava | Registration - QR Code", [{filename: "qrcode.png", content: url.split("base64,")[1], encoding: 'base64'}]);
                 
                 registration.doc(id).delete();
             }
