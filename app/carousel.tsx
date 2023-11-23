@@ -22,7 +22,12 @@ const Carousel = () => {
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide - 1));
+    if(currentSlide === 0) {
+      setCurrentSlide((prevSlide) => (prevSlide + 3));
+
+    } else {
+        setCurrentSlide((prevSlide) => (prevSlide - 1));
+    }
   };
 
   return (
