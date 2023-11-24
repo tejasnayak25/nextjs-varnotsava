@@ -25,6 +25,7 @@ export default function RootLayout({
           as="font"
           crossOrigin=""
         />
+        <meta property="og:image" content="/download (8).png" />
         <link rel="stylesheet" href="/material-icons.css" />
         <link rel="stylesheet" href="/header.css" />
         
